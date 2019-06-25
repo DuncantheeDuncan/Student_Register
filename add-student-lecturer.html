@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-1.3.2.min.js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="jquery-3.4.0.min.js"></script>
+	<script>$(function() { alert('hello J Query') });</script>
+	
+	<script>
+		 //this line of codes will display a different conntent whem clicked.
+// 		$(document).ready(function(){
+//     $('input[name=content_type]').on('change', function(){
+//     	$('span').hide();
+// $('input[name="content_type"]').on('change',function(){
+//     $('span').hide();
+//     $(this).next().show();
+// });
+//     var n = $(this).val();
+//     switch(n)
+//     {
+//             case '1':
+//                   $('#show').html("Adding Students");
+//                   break;
+//             case '2':
+//                   $('#show').html(href="Adding Lecturer");
+//             //       break;
+//             // case '3':
+//             //       $('#show').html("3rd radio button");
+//             //       break;
+//         }
+//     });
+// });
+		$(function() {
+  $('.jqueryOptions').hide();
+
+  $('#choose').change(function() {
+    $('.jqueryOptions').slideUp();
+    $('.jqueryOptions').removeClass('current-opt');
+    $("." + $(this).val()).slideDown();
+    $("." + $(this).val()).addClass('current-opt');
+  });
+  });
+	</script>
+	
+</head>
+<body>
+
+
+<h1>
+<p>this page will add both students and or lectures</p>
+
+</h1>
+</form>
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personal information:</legend>
+
+    <div class="select-area">
+  <select name="choose" id="choose" class="input-select">
+    <option value="nul" selected>Make a Selection of who you want to add</option>
+    <option value="opt1">Student</option>
+    <option value="opt2">lecturer</option>
+  </select>
+</div>
+
+<section class="jqueryOptions opt1">
+  <div class="content">
+    <h2>Option 1 Content</h2>
+    <p>
+    	<input type="text" name="IcasNumber" placeholder="Icas Number">&nbsp&nbsp&nbsp
+  		<input type="text" name="Identification" placeholder="Identification no."><br><br>
+      ...
+    </p>
+  </div>
+</section>
+
+<section class="jqueryOptions opt2">
+  <div class="content">
+    <h2>Option 2 Content</h2>
+    <p>
+      ...
+    </p>
+  </div>
+</section>
+
+
+
+ 
+ 
+ 
+    
+
+  </fieldset>
+
+
+</form>
+<script type="text/javascript">
+	
+	$(document).ready(function () {
+ 
+var list1 = document.getElementById('firstList');
+ 
+list1.options[0] = new Option('--Select--', '');
+list1.options[1] = new Option('Snacks', 'Snacks');
+list1.options[2] = new Option('Drinks', 'Drinks');
+});
+</script>
+
+ <div class="col-md-4">
+    <form>
+    <h4>Food Type</h4>
+    <select class="form-control"  id='firstList' name='firstList' onClick="getFoodItem()">
+    </select>
+     
+    <h4>Food Item</h4>
+    <select class="form-control"  id='secondList' name='secondList' >
+    </select>
+
+    <select onchange="location.href='http://www.jthink.net/songkong/'+this.value;">
+  <option value="en">English</option>
+  <option value="de">Deutsch</option>
+  <option value="ez">Español</option>
+  <option value="fr">Français</option>
+</select>
+     
+    </form>
+    </div>
+    <input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email" value="emailass">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+User password:<br>
+  <input type="password" name="psw">
+
+<select name = "dropdown">
+            <option value = "Computer Architecture" selected>Computer Architecture</option>
+            <option value = "Java">Java</option>
+            <option value = "Discrete Mathematics">Discrete Mathematics</option>
+         </select>
+<!-- ----------------------------------------------------------------------------------- -->
+<div class="select-area">
+  <select name="choose" id="choose" class="input-select">
+    <option value="nul" selected>Make a Selection</option>
+    <option value="opt1">Option 1</option>
+    <option value="opt2">Option 2</option>
+    <option value="opt3">Option 3</option>
+  </select>
+</div>
+
+<section class="jqueryOptions opt1">
+  <div class="content">
+    <h2>Option 1 Content</h2>
+    <p>
+      ...
+    </p>
+  </div>
+</section>
+
+<section class="jqueryOptions opt2">
+  <div class="content">
+    <h2>Option 2 Content</h2>
+    <p>
+      ...
+    </p>
+  </div>
+</section>
+
+<section class="jqueryOptions opt3">
+  <div class="content">
+    <h2>Option 3 Content</h2>
+    <p>
+      ...
+    </p>
+  </div>
+</section>
+
+
+</body>
+</html>
+
+
+
+    <!-- <p><input type='radio' name='content_type' value='1' />&nbsp;This is content A of request 1</p>
+<p><input type='radio' name='content_type' value='2' />&nbsp;This is content B of request 2</p> -->
+<!-- 
+<p>Lecturer: <input type='radio' class="rad" name='content_type' value='1' />&nbsp;<span >This is content A of request 5
+<input type="text" name="IcasNumber" placeholder="Icas Number">&nbsp&nbsp&nbsp
+  <input type="text" name="Identification" placeholder="Identification no."><br><br>
+ 
+</span></p>
+<p>Student: <input type='radio' class="rad" name='content_type' value='2' />&nbsp;<span>This is content B of request 4
+	<input type="text" name="IcasNumber" placeholder="Icas Number">&nbsp&nbsp&nbsp
+  <input type="text" name="Identification" placeholder="Identification no."><br><br>
+<input type="text" name="IcasNumber" placeholder="Icas Number">&nbsp&nbsp&nbsp
+  <input type="text" name="Identification" placeholder="Identification no."><br><br>
+ 
+</span></p>
+
+
+
+<div id='show'></div>
+ -->
