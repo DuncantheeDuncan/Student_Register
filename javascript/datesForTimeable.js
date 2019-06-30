@@ -10,7 +10,7 @@ function weekDay() {
     document.getElementById("day").innerHTML = daysOfTheWeek[today]+" "+days.getDate()+" "+monthOfTheYear[month]; 
 }
 
-//to open a new website 
+//to open a new page..
 function toRegister() {
     window.open("InclassStudents.html");
 
