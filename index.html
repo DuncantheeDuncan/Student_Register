@@ -6,27 +6,32 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
+
 	<div class="container">
 		<div id="logo_container">
-			<img class="img-responsive" id="Logo" src="rgi.png">
+			<img class="img-responsive" id="Logo" src="images/home_rgi_logo.png">
 		</div>
+
 		<div class= "main_div">
 				<h2>LECTURE<br> SIGN IN</h2>
 				<p>ENTER YOUR ASSIGNED CODE</p><BR>
+
 			<form class="input_group">
 				<input id="input_box" type="text" name="VerificationCode" placeholder="UNIQUE CODE">
 			</form>
+
 
 			<script type="text/javascript">
 				$('input').keypress(function () {
 					var ten = 9;
 					if (this.value.length == ten) {
-				window.open("confirmation.html");
-				window.close("Home.html");
+				window.open("html/confirmation.html");
+				window.close("index.html");
 					}
 				});
-			</script>
+				</script>
 
 		</div>
 	</div>
