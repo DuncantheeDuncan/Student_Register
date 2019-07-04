@@ -3,6 +3,7 @@
 if(count($_POST)>0){
     require_once("db.php"); 
     
+    
     $sql = "INSERT INTO logins (lecture_name,passcode) VALUES ('" . $_POST["lecture_name"] . "','" . $_POST["passcode"] . "')";
     mysqli_query($conn,$sql);
   // i must make sure that what's inserted here is hashes..

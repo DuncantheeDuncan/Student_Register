@@ -1,6 +1,6 @@
 <?php
 //this ill remember logged in users
-// session_start(); 
+session_start(); 
 
 // cooneting to Database
 $conn = mysqli_connect("localhost","root","","student_Register");
