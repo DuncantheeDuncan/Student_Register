@@ -8,7 +8,7 @@ $conn = mysqli_connect("localhost","root","","student_Register");
 if($conn == true){
     echo "connected index";
 }else{
-    die ("opps somthing wrong " );
+    die ("opps somthing wrong you are not connected!" );
 }
 
 

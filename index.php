@@ -5,9 +5,9 @@ require_once "db.php";
 
 
 // NOT WORKING q00 pERCENT!!
-if(!isset($_POST['passcode'])){
-	die ('please enter passcode');
-}
+// if(!isset($_POST['passcode'])){
+// 	die ('please enter passcode');
+// }
 
 if($stmt = $conn->prepare('SELECT userId, lecture_name FROM logins WHERE passcode = ?')){
 	$stmt->bind_param('i',$_POST['passcode']);
@@ -42,6 +42,8 @@ if($stmt = $conn->prepare('SELECT userId, lecture_name FROM logins WHERE passcod
 
  
 ?>
+
+
 <html>
 <head>
 	<title>Lecture login</title>
@@ -61,21 +63,21 @@ if($stmt = $conn->prepare('SELECT userId, lecture_name FROM logins WHERE passcod
 				<?php	echo "php connected"; ?>
 		
 
-			<form class="input_group" method="post" action=""  >
+			<form class="input_group"  id="form" method="post" action=""  >
 				<input id="input_box" type="int" name="passcode" placeholder="UNIQUE CODE">
-				<input type="submit" name="submit" value="Submit" class="btnSubmit">
+				<!-- <input type="submit" name="submit"  value="Submit" class="btnSubmit"> -->
 			</form>
 				
 			<script type="text/javascript">
 				$('input').keypress(function () {
-					var ten = 9;
+					var ten = 10;
+					$('p').text(ten.size);
 					if (this.value.length == ten) {
-
-						// var htmlString="<?php  echo $htmlString; ?>";
-							//   alert(htmlString);
-						// var jj="<?php $jj;?>";
-						
-						window.close("index.php");
+		
+						$(function(){
+							$("#form").submit();
+						})
+				window.close("index.php");
 				window.open("php/confirmation.php");
 				
 					}

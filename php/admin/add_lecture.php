@@ -1,7 +1,8 @@
 <?php
 
 if(count($_POST)>0){
-    require_once("db.php"); 
+    require_once("../../db.php"); 
+    // $_SERVER['']
     
     
     $sql = "INSERT INTO logins (lecture_name,passcode) VALUES ('" . $_POST["lecture_name"] . "','" . $_POST["passcode"] . "')";
@@ -12,20 +13,9 @@ if(count($_POST)>0){
 	if(!empty($current_id)) {
         $message = "A new lecture has bee succesfully added ";
     }else{
-        $message = "Error";
+        $message = "<h1>opps.. somthing wrong!!</h1>";
     }
 
-// $query= $conn->prepare("INSERT INTO 'logins' ('lecture_name','passcode') VALUES ('" . $_POST["lecture_name"] . "',?)");
-// // $lecture_name = $_POST["lecture_name"];
-// $passcode = PASSWORD_HASH($_POST["passcode"], PASSWORD_DEFAULT);
-
-
-// $query->bind_param($passcode);
-// if ($query->execute()) {
-//   echo "Query executed.";
-// } else{
-//   echo "Query error.";
-// }
 
 }
 
@@ -35,7 +25,7 @@ if(count($_POST)>0){
     <head>
 </head>
 <body>
-    <h1>checking... </h1>
+    <h1>checking.. </h1>
     <form name="frmUser" method="post" action="">
     <div style="width:500px;">
     <div class="message"> <?php if(isset($message)) { echo $message; } ?> </div>
@@ -51,7 +41,7 @@ if(count($_POST)>0){
     <td><label>Name: </label></td>
     <td><input type="text" name="lecture_name"  class="txtField"></td>
     <td><label>passcode: </label></td>
-    <td><input type="password" name="passcode" class="txtField"></td>
+    <td><input type="text" name="passcode" class="txtField"></td>
 
     </tr>
    

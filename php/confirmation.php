@@ -7,6 +7,10 @@ if(!isset($_SESSION['loggedin'])){
 	exit();
 }
 
+// $lecture_name = 
+
+// echo $lecture_name." this";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +27,9 @@ if(!isset($_SESSION['loggedin'])){
 				<img class="Lecture_img"src="photo.png"> 	
 			<p>
 				<span id="ICAS_NUMBER">121589</span><BR>
-				<span id="name"><?php echo '<br/>welcome '.$_SESSION['name'] . '!';?></span>
+				
+				<span id="name"><?php echo '<br/>welcome '.$_SESSION['name']. '!!';?></span>
+			
 			</p>
 			<p>Faculty Of<br>
 				<span id="Faculty">Information Technology</span> 
