@@ -3,12 +3,28 @@
 if(count($_POST)>0){
     require_once("db.php"); 
     
-    $sql = "INSERT INTO logins (passcode) VALUES ('" . $_POST["passcode"] . "')";
+    $sql = "INSERT INTO logins (lecture_name,passcode) VALUES ('" . $_POST["lecture_name"] . "','" . $_POST["passcode"] . "')";
     mysqli_query($conn,$sql);
+  // i must make sure that what's inserted here is hashes..
+    
 	$current_id = mysqli_insert_id($conn);
 	if(!empty($current_id)) {
-        $message = "New User111 Added Successfully";
+        $message = "A new lecture has bee succesfully added ";
+    }else{
+        $message = "Error";
     }
+
+// $query= $conn->prepare("INSERT INTO 'logins' ('lecture_name','passcode') VALUES ('" . $_POST["lecture_name"] . "',?)");
+// // $lecture_name = $_POST["lecture_name"];
+// $passcode = PASSWORD_HASH($_POST["passcode"], PASSWORD_DEFAULT);
+
+
+// $query->bind_param($passcode);
+// if ($query->execute()) {
+//   echo "Query executed.";
+// } else{
+//   echo "Query error.";
+// }
 
 }
 
@@ -30,8 +46,12 @@ if(count($_POST)>0){
     <td colspan="2">Add New User</td>
     </tr>
 
-    <td><label>Password</label></td>
+
+    <td><label>Name: </label></td>
+    <td><input type="text" name="lecture_name"  class="txtField"></td>
+    <td><label>passcode: </label></td>
     <td><input type="password" name="passcode" class="txtField"></td>
+
     </tr>
    
     <tr>
