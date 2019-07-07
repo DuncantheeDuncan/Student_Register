@@ -29,7 +29,7 @@ if(!isset($_SESSION['loggedin'])){
 				<span id="ICAS_NUMBER">121589</span><BR>
 				
 				<span id="name"><?php echo '<br/>welcome '.$_SESSION['name']. '!!';?></span>
-			
+				
 			</p>
 			<p>Faculty Of<br>
 				<span id="Faculty">Information Technology</span> 
