@@ -1,17 +1,9 @@
 <?php	
-
-// next to try snd search if the user is valid or not..
 require_once "db.php";
 require_once "sessions_start.php";
-
-
  ?>
-<?php $htmlString= 'testing'; 
 
  
-?>
-
-
 <html>
 <head>
 	<title>Lecture login</title>
