@@ -13,10 +13,10 @@ if(count($_POST)>0){
 
 // $im = $_POST["lecture_picture"];
     $imagename= $_FILES["lecture_picture"]["name"];// NOT SURE HY ADD NAME IN THIS ARRY???
-    // $image_name=$_FILES['". $_POST[""]"']['name'];
+    
 
 
-    $imagetmp= addslashes(file_get_contents($_FILES['lecture_picture']['temp_name']));// getting content
+    $imagetmp = addslashes(file_get_contents($_FILES['lecture_picture']['tmp_name']));// getting content
     
 
 
@@ -27,7 +27,7 @@ mysqli_query($conn,$insert_image);
                         if(isset($_POST["submit"]))
                         {
                             
-                            $file = addslashes(file_get_contents($_FILES["lectures_picture"]["temp_name"]));
+                           $file = addslashes(file_get_contents($_FILES["lecture_picture"]["tmp_name"]));
                             
                             $query = "INSERT INTO pictures  VALUES $file ";
                         
@@ -38,33 +38,7 @@ mysqli_query($conn,$insert_image);
                         }
 
 
-                        
-
-                        // if (isset($_FILES["lecture_picture"]["name"])) {
-                        
-                        //     $name = $_FILES["lecture_picture"]["name"];
-                        //     $tmp_name = $_FILES['lecture_picture']['tmp_name'];
-                        //     $error = $_FILES['lecture_picture']['error'];
-                        
-                        //     if (!empty($name)) {
-                        //         $location = '../rgi2.png';
-                                
-                        //         // $location = '../hhh/rgi2.png';
-                        //         if  (move_uploaded_file($tmp_name, $location.$name)){
-                        //             echo 'Uploaded';
-                        //         }
-                        
-                        //     } else {
-                        //         echo 'please choose a file';
-                        //     }
-                        // }
-                        
-                        
-                        // <form action="test.php" method="POST" enctype="multipart/form-data">
-                        //     <input type="file" name="file"><br><br>
-                        //     <input type="submit" value="Submit">
-                        // </form>
-
+                 
 // if (!$_POST) {
 //     printf("Error: %s\n", mysqli_error($conn));
 //     exit();
@@ -118,6 +92,14 @@ mysqli_query($conn,$insert_image);
     //     printf("Error: %s\n", mysqli_error($conn));
     //     exit();
     // }
+
+
+    //  detect mdevice
+//     if (preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"])) {
+// 	// Is mobile...
+// }
+
+
     while($row = mysqli_fetch_array($result))
     {
         echo '
@@ -135,6 +117,7 @@ mysqli_query($conn,$insert_image);
     </div>
     </form>
     </html>
+    
     <Script>
     function(){
         
@@ -160,4 +143,3 @@ mysqli_query($conn,$insert_image);
         });
     };
     </script>
-    
