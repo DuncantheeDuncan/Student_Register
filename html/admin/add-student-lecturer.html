@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../test.css">
+    <script type="text/javascript" src="../../javascript/admin/add-student-lecture.js"></script>
 	<script type="text/javascript" src="jquery-1.3.2.min.js/jquery-1.3.2.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="jquery-3.4.0.min.js"></script>
@@ -91,12 +93,12 @@
   
 </span>
 </br>
-      <!-- current year -->
-      <!-- modules -->
+</div>
+<br /> 
+<br /> 
       
-    
-    
-  </div>
+     
+  
 </section>
 
 <section class="jqueryOptions opt2">
@@ -108,6 +110,81 @@
   </div>
 </section>
   </fieldset>
+<script>
+$(document).ready(function() {
+    $('.radioshow').on('change', function() { 
+        var val = $(this).attr('data-class'); 
+        $('.allshow').hide();
+        $('.' + val).show();        
+    });
+}); 
+
+alert("connected from same page..");
+
+</script>
+  <section>
+
+
+
+
+                   <!-- current year -->
+      <!-- department -->
+      <!-- modules -->
+     
+      <div class="form-group radioeffect">
+          <input name="radiog_lite" id="radio1" class="css-checkbox radioshow" type="radio" data-class="div1">
+          <label for="radio1" class="css-label radGroup1">Add student modules</label>
+   </div>
+    <br> 
+                      <div class="div1 allshow" style="display: none;">
+                          <h3>Year of study</h3>
+                          <input name="radiog_lite" id="radio2" class="css-checkbox radioshow" type="radio" data-class="div2">
+                          <label for="radio2" class="css-label radGroup1">first year</label>
+  
+                          <input name="radiog_lite" id="radio3" class="css-checkbox radioshow" type="radio" data-class="div3">
+                          <label for="radio3" class="css-label radGroup1">second year</label>
+
+                          <input name="radiog_lite" id="radio4" class="css-checkbox radioshow" type="radio" data-class="div4">
+                          <label for="radio4" class="css-label radGroup1">third year</label>
+
+                          <input name="radiog_lite" id="radio5" class="css-checkbox radioshow" type="radio" data-class="div5">
+                          <label for="radio5" class="css-label radGroup1">fourth year</label>
+
+
+                          <!-- <input name="radiog_lite" id="radio3" class="css-checkbox radioshow" type="radio" data-class="div3">
+                          <label for="radio3" class="css-label radGroup1">Option 3</label> -->
+                      </div>
+  
+  <!-- to be displayed on the browser.. -->
+             <div class="div2 allshow" style="display: none;">
+                  <h3>Option Two</h3>
+                  
+                  <script>
+                    
+                  document.writeln("java script\n");
+                  document.writeln('\n');
+                  document.writeln();
+                  var first_year_modules =["1","2","r","d"]; 
+                  for(var i = 0; i< first_year_modules.length; i++){
+                    document.writeln('<input type="checkbox">'+first_year_modules[i]);
+                    document.writeln('\n');
+                  }
+                  
+                  
+                  </script>
+              </div>
+  
+<!--   
+          <div class="div3 allshow" style="display: none;">
+                  <fieldset>
+                  <h3>Option three</h3>
+              </fieldset>
+              </div>
+  -->
+
+
+
+  </section>
 </form>
 
 </body>
