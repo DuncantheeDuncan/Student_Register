@@ -57,17 +57,18 @@ mysqli_query($conn,$insert_image);
 
 ?>
 
-
+<!-- worrking -->
+<!-- 
 <html>
     <head>
 </head>
 <body>
     <h1>checking.. </h1>
     <form name="frmUser" method="post" action="" enctype="multipart/form-data">
-   
+ -->   
    
         <!-- <img alt='List' title='List' src='images/list.png' width='15px' height='15px'/> List User</a></div> -->
-    <table border ="0" cellpadding="10" cellspacing="0" width="500" align="center">
+   <!--  <table border ="0" cellpadding="10" cellspacing="0" width="500" align="center">
     <tr>
     <td colspan="2">Add New User</td>
     </tr>
@@ -83,11 +84,11 @@ mysqli_query($conn,$insert_image);
    
     <tr>
     <td colspan="2"><input type="submit" name="submit"  id= "submit" value="Submit" class="btnSubmit"></td>
-    </tr>
+    </tr> -->
     <?php
-    require_once("../../db.php"); 
-    $query = "SELECT * FROM pictures ORDER BY pictures_ID DESC";
-    $result = mysqli_query($conn,$query);
+    // require_once("../../db.php"); 
+    // $query = "SELECT * FROM pictures ORDER BY pictures_ID DESC";
+    // $result = mysqli_query($conn,$query);
     // if (!$check1_res) {
     //     printf("Error: %s\n", mysqli_error($conn));
     //     exit();
@@ -100,20 +101,20 @@ mysqli_query($conn,$insert_image);
 // }
 
 
-    while($row = mysqli_fetch_array($result))
-    {
-        echo '
-<tr>
-    <td>
-    <img src="data:image/jpeg;base64,'.base64_encode($row['Lectures_picture']).'" height="400" width="400"/>
-    </td>
-</tr>
+//     while($row = mysqli_fetch_array($result))
+//     {
+//         echo '
+// <tr>
+//     <td>
+//     <img src="data:image/jpeg;base64,'.base64_encode($row['Lectures_picture']).'" height="400" width="400"/>
+//     </td>
+// </tr>
 
-        ';
-    }
+        // ';
+    // }
     // echo $_FILES['lecture_picture'];
     ?>
-    </table>
+    <!-- </table>
     </div>
     </form>
     </html>
@@ -142,4 +143,6 @@ mysqli_query($conn,$insert_image);
             }
         });
     };
-    </script>
+     -->
+ <!-- </script> -->
+<!-- worrking -->
