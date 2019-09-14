@@ -10,7 +10,7 @@
         return true;
     }    
 
-function warnin(){
+function pwarnin(){
 						Swal.fire({
 						
 					  type: 'error',
@@ -22,4 +22,7 @@ function warnin(){
 alert("aibo!!");
 		
 
+
 					}
+
+					
