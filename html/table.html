@@ -44,12 +44,15 @@
 // setInterval(fade,4000);
 function getTheTime(hours, minutes){
 var time = hours + ":"+minutes;
-    var show = document.getElementById("displaytimerr");
+   
+var show = document.getElementById("displaytimerr");
     show.innerHTML = time;
 
 
+     while(true){
+       
 
-       if(hours >= 9 && minutes >=30){//Module 1
+        if(hours >= 9 && minutes >=30){//Module 1
        sec = 4000;
        number = 1;
        name_of_mudule = "#active"
@@ -58,7 +61,7 @@ var time = hours + ":"+minutes;
        }
       /*else */ if(hours >= 10 && minutes >=30 ){//Module 2
        sec = 4000;
-       number = 2;
+       this.number = 2;
        name_of_mudule = "#active"
        var  i= name_of_mudule + number;
 
@@ -111,13 +114,15 @@ var time = hours + ":"+minutes;
 
        }
 
-       // else{
-       //  sec = 4000;
-       // number = 0;
-       // name_of_mudule = "#active"
-       // var  i= name_of_mudule + number;
-       // }
+       else{
+        sec = 4000;
+       number = 0;
+       name_of_mudule = "#active"
+       var  i= name_of_mudule + number;
+       }
+
        fade(i,sec);
+     }
 }
 
 
