@@ -1,11 +1,11 @@
-// //cons
+//cons
 // var days = new Date();
 
 // function timeTable(){
-//     weekDay();
-//     sortTheTableLineUp();
+    // weekDay();
+    // sortTheTableLineUp();
 // }
-// // //to write the date
+// //to write the date
 // function weekDay() {
 //     var today = days.getUTCDay();
 //     var month = days.getUTCMonth();
@@ -14,7 +14,7 @@
 
 //     document.getElementById("day").innerHTML = daysOfTheWeek[today]+" "+days.getDate()+" "+monthOfTheYear[month]; 
 //     console.log("day :"+today);}
-// //////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 // function sortTheTableLineUp() {
    
 //     console.log(classModule);
@@ -41,12 +41,12 @@
 //     console.log(items);
 //     console.log(list);
 // }
-// //////////////////////////////////////////////////////////////////////////////////////////////////////
-// //to open a new page..
-// function toRegister() {
-//     window.open("InclassStudents.html");
-// }
-// //validate user input
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//to open a new page..
+function toRegister() {
+    window.open("InclassStudents.html");
+}
+//validate user input
 // function validateStudentNumber(){
 //     let StudentNo=document.getElementById("input_box");
 //     let studentNumber=document.getElementById("input_box").value;
@@ -76,47 +76,47 @@
 //             console.log("have letters : "+anyText);
 //         }
 // }
-//                 let field = "08/19"
-//                 let day = new Date();
-// 				let mm= day.getMonth()+1;
-// 				let yy= day.getFullYear().toString().substr(-2);
+    //             let field = "08/19"
+    //             let day = new Date();
+				// let mm= day.getMonth()+1;
+				// let yy= day.getFullYear().toString().substr(-2);
 
-// 				if(mm<10){
-// 					mm= '0'+mm;
-// 				}
-// 				let today = mm+"/"+yy;
-// 				if(field==today){
-//                     console.log("true");
-//                     console.log(today);
-// 				}
-// 				else{
-//                     console.log("false");
-//                     console.log(today);
-//                 }
+				// if(mm<10){
+				// 	mm= '0'+mm;
+				// }
+				// let today = mm+"/"+yy;
+				// if(field==today){
+    //                 console.log("true");
+    //                 console.log(today);
+				// }
+				// else{
+    //                 console.log("false");
+    //                 console.log(today);
+    //             }
                 
 
-//             let user ="Hi my";
-//             let regExp = /\s/;
-//             let result = regExp.test(user);
-//             if (result == true && user.length>=8 && user.length<=20){
-//             console.log(result);
-//             console.log(user.length);
+    //         let user ="Hi my";
+    //         let regExp = /\s/;
+    //         let result = regExp.test(user);
+    //         if (result == true && user.length>=8 && user.length<=20){
+    //         console.log(result);
+    //         console.log(user.length);
 
-//             }else{
+    //         }else{
 
-//                 console.log("requirements not met");
-//                 console.log(user.length);
-//             }
+    //             console.log("requirements not met");
+    //             console.log(user.length);
+    //         }
           
             
             
-//             $(function(){
+    //         $(function(){
                 
-//                $("#active1").click(function() {
-//                 for (let i = 0; i < 8; i++) {
-//                     let htmlElenent = "#active" + i;
-//                     $(htmlElenent).fadeOut(10000*i+2);
-//                     console.log(htmlElenent);
-//                 }
-//                });   
-//             });
+    //            $("#active1").click(function() {
+    //             for (let i = 0; i < 8; i++) {
+    //                 let htmlElenent = "#active" + i;
+    //                 $(htmlElenent).fadeOut(10000*i+2);
+    //                 console.log(htmlElenent);
+    //             }
+    //            });   
+    //         });
