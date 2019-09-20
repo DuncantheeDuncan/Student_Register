@@ -46,6 +46,7 @@
 function toRegister() {
     window.open("InclassStudents.html");
 }
+
 //validate user input
 // function validateStudentNumber(){
 //     let StudentNo=document.getElementById("input_box");

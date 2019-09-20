@@ -1,73 +1,165 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Timetable</title>
 	<link rel="stylesheet" href="../bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/timetable.css">
 	<script src="../jquery-1.3.2.min.js/jquery-1.3.2.min.js"></script>
 	<script src="../javascript/datesForTimeable.js"></script>
 </head>
-<body onload="timeTable()">
+<body>
+			
+			<script type="text/javascript">
+					var sec;
+					var number;
+					var name_of_mudule;
+					
+		
+		
+				window.onload = function () { DisplayCurrentTime() };
+				setInterval(DisplayCurrentTime, 1000);
+
+				function DisplayCurrentTime() {
+					var date = new Date();
+					var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+					var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+					var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+					time = hours + ":" + minutes + ":" + seconds;
+					var lblTime = document.getElementById("displaytimer");
+					// lblTime.innerHTML = time;
+					getTheTime(hours,minutes);
+				};
+
+		
+		function getTheTime(hours, minutes){
+		var time = hours + ":"+minutes;
+		   
+		var show = document.getElementById("displaytimerr");
+			show.innerHTML = time;
+		
+				if(hours >= 9 && minutes >=30){//Module 1
+			   sec = 4000;
+			   number = 1;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+		
+			   }
+			  /*else */ if(hours >= 10 && minutes >=30 ){//Module 2
+			   sec = 4000;
+			   number = 2;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+		
+			   }
+			   /*else*/ if(hours >= 10  && minutes >=45){//break 3
+			   sec = 4000;
+			   number = 3;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   }
+			   /*else*/ if(hours >= 11  && minutes >=45){//Module 4
+			   sec = 4000;
+			   number = 4;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   }
+			   /*else*/ if(hours >= 12  && minutes >=45){//Module 5
+			   sec = 4000;
+			   number = 5;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   }
+			   /*else*/ if(hours >= 13  && minutes >=30){//break 6
+			   sec = 4000;
+			   number = 6;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   }
+				if(hours >= 14  && minutes >=30 ){//Module 7
+			   sec = 4000;
+			   number = 7;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   }  if(hours >= 15  && minutes >=30){//Module 8
+			   sec = 4000;
+			   number = 8;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   } if(hours >= 16  && minutes >=30){//Module 9
+			   sec = 4000;
+			   number = 9 ;
+			   name_of_mudule = "#active"
+			   var  i= name_of_mudule + number;
+			   fade(i,sec);
+			   }
+		
+		
+			console.log({i, sec, hours, minutes});
+			
+		
+			 }
+		
+		
+		
+		
+		function fade(i,sec){
+				$(document).ready(function () {
+					setTimeout(function () {
+		
+						$(i).hide("2000")
+					}, sec);
+		
+				});
+		
+			}
+			</script>
+		
 	
-	<script type="text/javascript">
-	var sec = 2000;
-        $(document).ready(function(){
-            setTimeout(function(){
-                $("#active1").hide(sec)
-                }, 3000);
-        });
-        </script>
+	
     
 	<div class="container">
 		<div id="logo_container">
 			<img class="img-responsive" id="Logo" src="../images/home_rgi_logo.png">
+			Time:<span  id="displaytimerr"> </span>
 		</div>
 		<div class= "main_div"><br>
 			<p id="day">
 			
-			</p>
-		<!-- <table id="Timetable">
-			<tr><th>Time</th><th>Module</th></tr>	
-				<tr>
-					<td> <a href="student.html"> 08:00-09:30</a></td>
-					<td><a href="student.html">IP 621 </a> </td>
-				</tr>
-					
-			<tr>
-				<td> <a href="student.html"> 08:00-09:30</a></td>
-				<td><a href="student.html">IS 621 </a> </td>
-			</tr>
-			<tr>
-				<td> <a href="student.html"> 08:00-09:30</a></td>
-				<td><a href="student.html">ITPM 621 </a> </td>
-			</tr>
-			<tr>
-				<td> <a href="student.html"> 08:00-09:30</a></td>
-				<td><a href="student.html">DBMS 621 </a> </td>
-			</tr>
-			<tr>
-				<td> <a href="student.html"> 08:00-09:30</a></td>
-				<td><a href="student.html">WEBTECH 621 </a> </td>
-			</tr>
-		</table> -->
-			<!-- <ul id="myList"><li>a</li><li>b</li><li>c</li><li>d</li> -->
-			</ul> 
+		
+			
 			<ul class="list-group" id="myList">
 				<li id="active1" class="list-group-item"><a href="student.html">1 LECTURE</a></li>
 				<li id="active2" class="list-group-item"><a href="student.html">2 LECTURE</a></li>
-				<li id="active3" class="list-group-item"><a href="student.html">3 LECTURE</a></li>
+				<li id="active3" class="list-group-item"><a href="student.html">3 Break</a></li>
 				<li id="active4" class="list-group-item"><a href="student.html">4 LECTURE</a></li>
 				<li id="active5" class="list-group-item"><a href="student.html">5 LECTURE</a></li>
-				<li id="active6" class="list-group-item"><a href="student.html">6 LECTURE</a></li>
-				
-			  </ul>
-	</div>
-		<div id="backlink">
-			<!-- to remove one of the links later -->
-			 <a id= "lOGOUT"  href="../index(remove_brackets.html"><label>LOGOUT</label></a>
+				<li id="active6" class="list-group-item"><a href="student.html">6 Break</a></li>
+				<li id="active7" class="list-group-item"><a href="student.html">7 LECTURE</a></li>
+				<li id="active8" class="list-group-item"><a href="student.html">8 LECTURE</a></li>
+				<li id="active9" class="list-group-item"><a href="student.html">9 LECTURE</a></li>
+		
+			</ul>
+
 			
-        </div>
+	</div>
+	<div id="backlink">
+		<!-- to remove one of the links later -->
+		 <a id= "lOGOUT"  href="../index(remove_brackets.html"><label>LOGOUT</label></a>
+		
+	</div>
+		
 	</div>
 </body>
 </html>  
