@@ -7,3 +7,5 @@
 int a = 123;
 
 ```
+install veu..
+    npm install vue

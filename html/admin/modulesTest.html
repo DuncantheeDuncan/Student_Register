@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="text/javascript" src="jquery-1.3.2.min.js/jquery-1.3.2.min.js"></script>
+
+	<script typetext="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script typetext="text/javascript" src="javascript/indexjs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- attempting to creat a hirachy of modules -->
+
+    <script>
+    $(function () {
+        $("#chkPassport").click(function () {
+            if ($(this).is(":checked")) {
+                $("#dvPassport").show();
+                $("#AddPassport").hide();
+            } else {
+                $("#dvPassport").hide();
+                $("#AddPassport").show();
+            }
+        });
+  
+    });
+    </script>
+
+<label for="chkPassport">
+        <input type="checkbox" id="chkPassport" />
+        one
+    </label>
+</body>
+</html>
