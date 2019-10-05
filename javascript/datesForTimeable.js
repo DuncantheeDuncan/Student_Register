@@ -1,3 +1,5 @@
+// alert("still on");
+
 //cons
 // var days = new Date();
 
@@ -121,3 +123,12 @@ function toRegister() {
     //             }
     //            });   
     //         });
+// var number = [];
+
+//    function myFunction()
+//    {
+//      var x = document.getElementById("avail_students");
+//      number.push(document.getElementById("input_box").value);
+//      x.innerHTML = number.join('<br/>'); 
+   
+
