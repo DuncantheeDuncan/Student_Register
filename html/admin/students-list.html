@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="formAdmin.css" media="all">
+	<link rel="stylesheet" type="text/css" href="students_table_style.css" media="all">
 	<script type="text/javascript" src="view.js"></script>
+	<script type="text/javascript" src="students_table_javascript.js"></script>
+	
 
 	<title>students</title>
 </head>
@@ -22,7 +25,74 @@
 
 <ul>
 <!-- serch button to search for students -->
-	<li id="li_1"> 
+<div id="default_admin_page_for_students">
+<!-- this is the default div that's going to show when the page is first loaded!! -->
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+      <th style="width:auto;">Student no.</th>
+    <th style="width:auto;">Name</th>
+    <th style="width:auto;">Surname</th>
+    <th style="width:auto;">Percentage %</th>
+  </tr>
+  <tr ><a href="">
+    <td>119489</td>
+    <td>Phumlani</td>
+    <td>Mthembu</td>
+    <td>68%</td>
+  </a>
+  </tr>
+  <tr>
+      <td>11234</td>
+      <td>Arnold</td>
+      <td>Mubaiwa</td>
+      <td>78%</td>
+    </tr>
+    <tr>
+        <td>11875</td>
+        <td>Lunga</td>
+        <td>Tshila</td>
+        <td>68%</td>
+      </tr>
+      <tr>
+          <td>145832</td>
+          <td>Mlungisi</td>
+          <td>Sthole</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+            <td>113674</td>
+            <td>Sabelo</td>
+            <td>Mthembu</td>
+            <td>35%</td>
+          </tr>
+          <tr>
+              <td>117463</td>
+              <td>Ayabonga</td>
+              <td>Mukariwa</td>
+              <td>88%</td>
+            </tr>
+            <tr>
+                <td>116709</td>
+                <td>Jack</td>
+                <td>Smith</td>
+                <td>68%</td>
+              </tr>
+              
+
+
+</table>
+
+</div>
+
+<!-- ------------------------------------ -->
+
+<div id="admin_page_for_students_after_search">
+<!-- this div goin to appear after the defalt div -->
+
+<li id="li_1"> 
 			
 			<div align="left" >
 				<input type="search" id="element_1" name="" placeholder="search for student" class="element text medium">
@@ -31,6 +101,9 @@
 		
 		</li>
 
+</div>
+
+	
 	
 
 <ul>
