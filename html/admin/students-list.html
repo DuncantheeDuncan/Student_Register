@@ -6,7 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="formAdmin.css" media="all">
 	<link rel="stylesheet" type="text/css" href="students_table_style.css" media="all">
+  <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="view.js"></script>
+  <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+
 	<script type="text/javascript" src="students_table_javascript.js"></script>
 	
 
@@ -24,9 +29,104 @@
 	   <div class="form_description"></div><!--if we want to add some description to our form-->
 
 <ul>
+  <script type="text/javascript">
+    $(function () {
+        $("#table_cell").click(function () {
+            if ($(this).is(":checked")) {
+                $("#default_admin_page_for_students").hide();
+            }else {
+                 $("#admin_page_for_students_after_search").show();
+               
+            }
+
+        });
+  
+    });
+
+
+
+  </script>
 <!-- serch button to search for students -->
 <div id="default_admin_page_for_students">
 <!-- this is the default div that's going to show when the page is first loaded!! -->
+<style type="text/css">
+        /*input[type="checkbox"] { display : none; }*/
+        /*td:hover input[type="checkbox"] { display : inline; }*/
+        /*input[type="checkbox"]:checked { display : inline; }*/
+
+.main { 
+            display: inline; 
+            position: relative; 
+           /* padding-left: 45px; 
+            margin-bottom: 15px; */
+            cursor: pointer; 
+            font-size: 20px; 
+        } 
+        /* Hide the default checkbox */ 
+        input[type=checkbox] { 
+            visibility: hidden; 
+        } 
+          
+        /* Creating a custom checkbox 
+        based on demand */ 
+
+        .geekmark { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            height: 25px; 
+            width: 25px; 
+            /*background-color: #dfdad9; */
+        } 
+          
+        /* Specify the background color to be 
+        shown when hovering over checkbox */ 
+        .main:hover input ~ .geekmark { 
+            background-color: green; 
+        } 
+          
+        /* Specify the background color to be 
+        shown when checkbox is active */ 
+      /*  .main input:active ~ .geekmark { 
+            background-color: red; 
+        } */
+          
+        /* Specify the background color to be 
+        shown when checkbox is checked */ 
+        .main input:checked ~ .geekmark { 
+            background-color: #d4d2d2; 
+        } 
+          
+        /* Checkmark to be shown in checkbox */ 
+        /* It is not be shown when not checked */ 
+        .geekmark:after { 
+            content: ""; 
+            position: absolute; 
+            display: none; 
+        } 
+          
+        /* Display checkmark when checked */ 
+        .main input:checked ~ .geekmark:after { 
+            display: inline; 
+        } 
+          
+        /* Styling the checkmark using webkit */ 
+        /* Rotated the rectangle by 45 degree and  
+        showing only two border to make it look 
+        like a tickmark */ 
+        .main .geekmark:after { 
+            left: 8px; 
+            bottom: 5px; 
+            width: 6px; 
+            height: 12px; 
+            border: solid white; 
+            border-width: 0 4px 4px 0; 
+            -webkit-transform: rotate(45deg); 
+            -ms-transform: rotate(45deg); 
+            transform: rotate(45deg); 
+        } 
+
+</style>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
@@ -37,12 +137,15 @@
     <th style="width:auto;">Surname</th>
     <th style="width:auto;">Percentage %</th>
   </tr>
-  <tr ><a href="">
-    <td>119489</td>
+  <tr >
+    
+  
+    <td>119489
+<label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
+    </td>
     <td>Phumlani</td>
     <td>Mthembu</td>
     <td>68%</td>
-  </a>
   </tr>
   <tr>
       <td>11234</td>
@@ -98,8 +201,26 @@
 				<input type="search" id="element_1" name="" placeholder="search for student" class="element text medium">
 				<button  >Search</button>
 			</div> 
-		
-		</li>
+   		<!-- </li> -->
+
+      <!-- <li id="li_2"> -->
+        
+
+        <fieldset style="width: auto;padding-right: 10px;">
+  <legend>Personal information</legend>
+  Name: <input type="text"><br>
+  Email: <input type="text"><br>
+  Date of birth: <input type="text">
+ </fieldset>
+
+ <fieldset>
+  <legend>Score:</legend>
+  Name: <input type="text"><br>
+  Email: <input type="text"><br>
+  Date of birth: <input type="text">
+ </fieldset>
+
+      </li>
 
 </div>
 
