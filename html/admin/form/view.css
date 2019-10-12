@@ -1,4 +1,4 @@
-body
+#main_body
 {
 	background:#fffff;
 	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
@@ -538,7 +538,7 @@ form .required
 /**** Guidelines and Error Highlight ****/
 form li.highlighted
 {
-	background-color:#fff7c0;
+	background-color:#fff7c0; 				backgroud color
 }
 
 form .guidelines
