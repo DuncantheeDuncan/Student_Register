@@ -24,18 +24,17 @@
 <div id="form_container">
     
       <h1><a>i am making an bar with color</a></h1>
-      
-      <form id="form_84530" class="appnitro" enctype="multipart/form-data" method="post" action="">
-	   <div class="form_description"></div><!--if we want to add some description to our form-->
-
-<ul>
-  <script type="text/javascript">
+       <script type="text/javascript">
     $(function () {
         $("#table_cell").click(function () {
             if ($(this).is(":checked")) {
-                $("#default_admin_page_for_students").hide();
+              $("#default_admin_page_for_students").hide();
+               $("#admin_page_for_students_after_search").show();
+               
             }else {
-                 $("#admin_page_for_students_after_search").show();
+                 $("#admin_page_for_students_after_search").hide();
+                  $("#default_admin_page_for_students").show();
+                  
                
             }
 
@@ -46,6 +45,11 @@
 
 
   </script>
+      <form id="form_84530" class="appnitro" enctype="multipart/form-data" method="post" action="">
+	   <div class="form_description"></div><!--if we want to add some description to our form-->
+
+<ul>
+ 
 <!-- serch button to search for students -->
 <div id="default_admin_page_for_students">
 <!-- this is the default div that's going to show when the page is first loaded!! -->
@@ -192,7 +196,7 @@
 
 <!-- ------------------------------------ -->
 
-<div id="admin_page_for_students_after_search">
+<div id="admin_page_for_students_after_search" style="display: none">
 <!-- this div goin to appear after the defalt div -->
 
 <li id="li_1"> 
@@ -222,7 +226,7 @@
 
       </li>
 
-</div>
+<!-- </div> -->
 
 	
 	
@@ -241,7 +245,7 @@
       And &nbsp <a href="https://github.com/Arnold-A-Mubaiwa/Student_Register" target="_blank">Arnold Anotida Mubaiwa</a>
       
 		</div>
-	</div>
+	<!-- </div> -->
    <img id="bottom" src="bottom.png" alt="">
  </body>
 </html>
