@@ -130,6 +130,10 @@
             transform: rotate(45deg); 
         } 
 
+        /* #shareSpace{padding-left:1em;} */
+        /* #shareSpace fieldset{display:inline-flex; width:auto;} */
+        
+
 </style>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
@@ -208,22 +212,32 @@
    		<!-- </li> -->
 
       <!-- <li id="li_2"> -->
+
+        <div id="shareSpace" style="width: 100px; float:left; height:100px; margin:10px">
+            <fieldset>
+                <legend>Personal information</legend>
+                Name: <input type="text"><br>
+                Email: <input type="text"><br>
+                Date of birth: <input type="text">
+               </fieldset>
+
+        </div>
+
+        <dive id="shareSpace" style="width: 100px; float:right; height:100px; margin:10px"> 
+            <fieldset>
+                <legend>Score:</legend>
+                Name: <input type="text"><br>
+                Email: <input type="text"><br>
+                Date of birth: <input type="text">
+               </fieldset>
+              
+        </dive>
+        
         
 
-        <fieldset style="width: auto;padding-right: 10px;">
-  <legend>Personal information</legend>
-  Name: <input type="text"><br>
-  Email: <input type="text"><br>
-  Date of birth: <input type="text">
- </fieldset>
+     
 
- <fieldset>
-  <legend>Score:</legend>
-  Name: <input type="text"><br>
-  Email: <input type="text"><br>
-  Date of birth: <input type="text">
- </fieldset>
-
+ 
       </li>
 
 <!-- </div> -->

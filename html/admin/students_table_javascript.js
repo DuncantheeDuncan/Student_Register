@@ -16,15 +16,16 @@ function myFunction() {
     // td2 = tr[i].getElementsByTagName("td")[2];
     // td3 = tr[i].getElementsByTagName("td")[3];
 
-    if (td0) {
-      txtValue = td0.textContent || td0.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    } 
-    else if (td1) {
+    // if (td0) {
+    //   txtValue = td0.textContent || td0.innerText;
+    //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //     tr[i].style.display = "";
+    //   } else {
+    //     tr[i].style.display = "none";
+    //   }
+    // } 
+    // else
+     if (td1) {
       txtValue = td1.textContent || td1.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
@@ -33,23 +34,23 @@ function myFunction() {
       }
     }
 
-    else if (td2) {
-      txtValue = td2.textContent || td2.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
+    // else if (td2) {
+    //   txtValue = td2.textContent || td2.innerText;
+    //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //     tr[i].style.display = "";
+    //   } else {
+    //     tr[i].style.display = "none";
+    //   }
+    // }
 
-    else if (td3) {
-      txtValue = td3.textContent || td3.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
+    // else if (td3) {
+    //   txtValue = td3.textContent || td3.innerText;
+    //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //     tr[i].style.display = "";
+    //   } else {
+    //     tr[i].style.display = "none";
+    //   }
+    // }
    
   }
 }
