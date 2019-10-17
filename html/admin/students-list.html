@@ -16,12 +16,12 @@
 	
 
 	<title>students</title>
-</head>
+ </head>
 
-<body id="main_body" class="safari">
+ <body id="main_body" class="safari">
     <img id="top" src="top.png" alt="">
     
-<div id="form_container">
+ <div id="form_container">
     
       <h1><a>i am making an bar with color</a></h1>
        <script type="text/javascript">
@@ -48,17 +48,17 @@
       <form id="form_84530" class="appnitro" enctype="multipart/form-data" method="post" action="">
 	   <div class="form_description"></div><!--if we want to add some description to our form-->
 
-<ul>
+ <ul>
  
-<!-- serch button to search for students -->
-<div id="default_admin_page_for_students">
-<!-- this is the default div that's going to show when the page is first loaded!! -->
-<style type="text/css">
+ <!-- serch button to search for students -->
+ <div id="default_admin_page_for_students">
+ <!-- this is the default div that's going to show when the page is first loaded!! -->
+ <style type="text/css">
         /*input[type="checkbox"] { display : none; }*/
         /*td:hover input[type="checkbox"] { display : inline; }*/
         /*input[type="checkbox"]:checked { display : inline; }*/
 
-.main { 
+ .main { 
             display: inline; 
             position: relative; 
            /* padding-left: 45px; 
@@ -132,13 +132,42 @@
 
         /* #shareSpace{padding-left:1em;} */
         /* #shareSpace fieldset{display:inline-flex; width:auto;} */
+
+        /* the two divs */
+        #twodives{
+          display: flex;
+          width: auto;
+        }
+       
+        #personal_information{
+          /* background-color: dodgerblue; */
+          /* width: 500px; */
+          padding: 20px;
+          flex-grow:1;
+
+
+        }
+
+        #Score_summary{
+          /* width: 500px; */
+          padding: 20px;
+          flex-grow:1;
+
+
+        }
+        #field_set{
+          display: flex;
+          width: auto;
+
+        }
+
         
 
-</style>
+ </style>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
-<table id="myTable">
+ <table id="myTable">
   <tr class="header">
       <th style="width:auto;">Student no.</th>
     <th style="width:auto;">Name</th>
@@ -149,7 +178,7 @@
     
   
     <td>119489
-<label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
+ <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
     </td>
     <td>Phumlani</td>
     <td>Mthembu</td>
@@ -194,62 +223,110 @@
               
 
 
-</table>
+ </table>
 
-</div>
+ </div>
 
-<!-- ------------------------------------ -->
+ <!-- ------------------------------------ -->
 
-<div id="admin_page_for_students_after_search" style="display: none">
-<!-- this div goin to appear after the defalt div -->
+   <div id="admin_page_for_students_after_search" style="display: none">
+ <!-- this div goin to appear after the defalt div -->
 
-<li id="li_1"> 
+      <li id="li_1"> 
 			
-			<div align="left" >
+		  	<div align="right" id="serch_Bar_for_Second_div" >
 				<input type="search" id="element_1" name="" placeholder="search for student" class="element text medium">
 				<button  >Search</button>
-			</div> 
-   		<!-- </li> -->
-
-      <!-- <li id="li_2"> -->
-
-        <div id="shareSpace" style="width: 100px; float:left; height:100px; margin:10px">
-            <fieldset>
-                <legend>Personal information</legend>
-                Name: <input type="text"><br>
-                Email: <input type="text"><br>
-                Date of birth: <input type="text">
-               </fieldset>
-
         </div>
-
-        <dive id="shareSpace" style="width: 100px; float:right; height:100px; margin:10px"> 
-            <fieldset>
-                <legend>Score:</legend>
-                Name: <input type="text"><br>
-                Email: <input type="text"><br>
-                Date of birth: <input type="text">
-               </fieldset>
-              
-        </dive>
-        
-        
-
-     
-
- 
       </li>
+        
+       <div id="twodives">
 
-<!-- </div> -->
+          <div id="personal_information">
+              <li id="li_1">
+                  <fieldset id="field_set">
+                      <legend>Personal Information</legend>
+                    <label>Name : Phumlani</label>
+                    <label>Name : Phumlani</label>
+                    <label>Name : Phumlani</label>
+                     </fieldset>
+            
+              </li>
+              
+    
+            </div>
+    
+            <div id="Score_summary">
+                <li id="li_1">
+                    <fieldset id="field_set">
+                        <legend>Personal Information</legend>
+                        Name: <input type="text" id="element_1" class="element text medium" style="width: auto; border:none"  value="Phumlani" disabled > 
+                        Email: <input type="text" id="element_1" class="element text medium" style="width: auto"><br>
+                        Date of birth: <input type="text" id="element_1" class="element text medium" style="width: auto">
+                       </fieldset>
+              
+                </li>
+            </div>
+       </div>
 
+       <!-- modules table -->
+       <table id="myTable">
+          <tr class="header">
+            <th style="width:auto;">detailed score</th>
+            <th style="width:auto;">module 1</th>
+            <th style="width:auto;">module 2</th>
+            <th style="width:auto;">module 3</th>
+            <th style="width:auto;">module 4</th>
+            <th style="width:auto;">module 5</th>
+            <th style="width:auto;">module 6</th>
+          </tr>
+          <tr >
+           
+            <td>Number of Lectures</td>
+            <!--  -->
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+          </tr>
+          <tr >
+           
+              <td>Absent</td>
+              <!--  -->
+              <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            </tr>
+            <tr >
+           
+                <td>present</td>
+                <!--  -->
+                <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+              </tr>
+        
+        
+         </table>
+        
+ 
+   </div>
 	
 	
 
-<ul>
+  </ul>
 	
 
 
-<!-- <hr /> -->
+ <!-- <hr /> -->
 	  </form>
 
 
