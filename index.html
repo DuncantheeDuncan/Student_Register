@@ -12,6 +12,7 @@
 
 
 	<link rel="stylesheet" type="text/css" href= "css/main.css">
+	<!-- <link rel="stylesheet" type="text/css" href= "html/admin/administrator.html"> -->
 	<script src="sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
@@ -46,17 +47,23 @@
 
 				$('input').keypress(function () {
 					var ten = 10;
-					var login = 1111111111;// this is temporary
+					var Lecture_login = 1111111111;// this is temporary 'Lecturer'
+					var Admin_login = 5555555555; // this is temp 'admin'
 					$('p').text(ten.size);
 
 					if (this.value.length == ten) {$(function(){ $("#form").submit();})
-					if(this.value == login){// this if block is temp.
+					if(this.value == Lecture_login){// this if block is temp.
 				// window.close("index.php");
 				window.open("html/confirmation.html");
 				alert("successfully logged in..");
+				}else if(this.value ==Admin_login){
+					// window.close("index.php");
+
+					window.open("html/admin/administrator.html");
+					
 				}else {
 
-					alert("unrecognised code");
+					alert("Incorrect login ID");
 					document.getElementById("one").innerHTML =  warnin();
 					
 
