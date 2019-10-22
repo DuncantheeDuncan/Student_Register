@@ -403,7 +403,7 @@ caption {
     border: 1px solid #fff;
   }
    /* around here we could use the HTML class to hide all other content on the page aside from the table */
-  html.emp-sales p, html.emp-sales h1 {
+   html.emp-sales p, html.emp-sales h1 {
     display: none; 
   }
  
@@ -411,7 +411,7 @@ caption {
 </style>
 </head>
 <body>
-  
+  <!-- 
   <h1>HTML Ipsum Presents</h1>
          
   <script type="text/javascript">
@@ -557,9 +557,77 @@ caption {
   <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
   
   
+   */
+   -->
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>
+         function functionConfirm(msg, myYes, myNo, cancel) {
+            var confirmBox = $("#confirm");
+            confirmBox.find(".message").text(msg);
+            confirmBox.find(".yes,.no,.cancel").unbind().click(function() {
+               confirmBox.hide();
+            });
+            confirmBox.find(".yes").click(myYes);
+            confirmBox.find(".no").click(myNo);
+            confirmBox.find(".no").click(cancel);
+            confirmBox.show();
+         }
+      </script>
+      <style>
+         #confirm {
+            display: none;
+            background-color: #91FF00;
+            border: 1px solid #aaa;
+            position: fixed;
+            width: 250px;
+            left: 50%;
+            margin-left: -100px;
+            padding: 6px 8px 8px;
+            box-sizing: border-box;
+            text-align: center;
+         }
+         #confirm button {
+            background-color: #48E5DA;
+            display: inline-block;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            padding: 5px;
+            text-align: center;
+            width: 80px;
+            cursor: pointer;
+         }
+         #confirm .message {
+            text-align: left;
+         }
+      </style>
+  <script>
+  alert("")
+  </script>
+   <div id="confirm">
+      <div class="message"></div>
+      <button class="yes">Yes</button>
+      <button class="no">No</button>
+      <button class="cancel">Cancel</button>
+   </div>
+   <button onclick='functionConfirm("Do you like Football?", function yes() {
+      alert("Yes")
+   }, function no() {
+      alert("no")
+   }
+   );'>submit</button> -->
   
-  
-  
-  
+   
+   <!-- <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script type="text/javascript">
+
+        $(document).ready( function() {
+
+        alert('Your Message');
+
+        });
+        </script> -->
+
+
+
 </body>
 </html>
