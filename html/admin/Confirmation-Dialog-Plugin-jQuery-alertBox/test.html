@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link href="alertBox.css" rel="stylesheet" type="text/css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<h1>jQuery alertBox: Confirm Dialog Plugin Demo</h1>
+
+<div class="jquery-script-ads" style="margin:50px auto">
+
+
+
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+
+</script>
+
+
+
+  <script type="text/javascript" src="alertBox.js"></script> <!-- need this one -->
+  
+
+  <div id="one">
+      <h1>one...</h1>
+    </div>
+    
+    <div id="two">
+    
+      <h1>two...</h1>
+    </div>
+</div>
+    
+
+
+    
+    <script type="text/javascript">
+
+        $(document).ready( function() {
+      
+        $("#one").hide();
+        $("#two").hide();
+
+
+        $('body').alertBox({
+        title: 'WHO DO YOU WANT TO ADD?',
+        lTxt: 'STUDENT',
+        lCallback: function(){
+          $("#one").show();
+          $("#two").hide();
+          // alert('You Just Clicked Back!');
+        },
+        rTxt: 'LECTURER',
+        rCallback: function(){
+          $("#one").hide();
+          $("#two").show();
+          // alert('You Just Clicked Okey!');
+         
+        }
+      })
+
+        });
+        </script>
+
+
+</body>
+</html>
