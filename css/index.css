@@ -1,11 +1,53 @@
-.container {
-	margin-left: 10%;
-	margin-right: 10%;
-	padding: 1%;
-	height: 600px;
-	border: 2px solid black;
+
+
+  /* COLORS ARE CHNANGED FOR TESTING REASONS */
+  
+  @media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    
+    .container {
+        margin-left: 1px;
+        margin-right: 1px;
+        padding: 1%;
+        border: 1px solid #df0808;
+}
+#Logo{
+	width: 100%;
+}
 
 }
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .container {
+        margin-left: 1px;
+        margin-right: 1px;
+        padding: 1%;
+        border: 1px solid #680db3;
+}
+#Logo{
+	width: 100%;
+}
+
+}
+
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+
+    /* portrait phones */
+    .container {
+        margin-left: 1px;
+        margin-right: 1px;
+        padding: 1%;
+        border: 1px solid #e9b013;    
+}
+#Logo{
+	width: 100%;
+}
+
+}
+
+/* 
 #logo_container{
 	width: 100%;
 	padding-bottom: 20px;
@@ -96,4 +138,4 @@ a{
 
 table{
 	text-align: left;
-}
+} */
