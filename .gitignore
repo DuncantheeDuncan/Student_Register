@@ -1,0 +1,17 @@
+*.class
+.metadata
+lib/build
+lib/out
+.classpath
+.project
+.settings
+.gradle
+*.iml
+*.ipr
+*.iws
+.idea
+target/*
+node_modules/*
+subjects/*
+other/*
+
