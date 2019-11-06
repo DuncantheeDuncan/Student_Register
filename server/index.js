@@ -8,7 +8,7 @@ let app = express();
 let PORT = process.env.PORT || 3008;
 
 app.listen(PORT, function(){
-  console.log('App starting on port http://localhost:', PORT);
+  console.log('App starting on port http://localhost:',PORT);
 });
 
 
@@ -22,6 +22,7 @@ app.set('view engine', 'handlebars');
 app.get('/', function (req, res) {
     res.render('index');
 });
+
 
 
 

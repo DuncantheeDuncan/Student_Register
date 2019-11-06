@@ -3,9 +3,7 @@
 # Arnold 
 # Phumlani
      assignment
-``java
-int a = 123;
 
-```
-install veu..
-    npm install vue
+### typ in this link inside your url
+
+# https://duncantheeduncan.github.io/Student_Register/client/index.html
