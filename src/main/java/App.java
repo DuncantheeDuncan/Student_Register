@@ -17,12 +17,16 @@ public class App {
         // root is 'src/main/resources', so put files in 'src/main/resources/public'
         //      res.redirect("/hello"); // redirect a page!!!
 
+
 //TODO: static files
 
         staticFiles.location("/public");
         staticFiles.location("/templates");
         staticFiles.location("/templates");
         staticFiles.location("/templates/js");
+
+
+
 
 
 //TODO:  HASH-MAPS  / LIST
@@ -41,6 +45,19 @@ public class App {
         List <String> list_of_provinc_address_for_student =new ArrayList<>();
         List <Integer> list_of_zip_codes_for_students = new ArrayList<>();
         List <String> list_of_countries_address_for_students = new ArrayList<>();
+
+
+        // parent spouse guardian
+        List <Integer> list_of_parent_numbers = new ArrayList<>();
+        List <String> list_of_parents_email_address = new ArrayList<>();
+        List <String> list_of_parents_street_address =new ArrayList<>();
+        List <String> list_of_parents_suburb_address = new ArrayList<>();
+        List <String> list_of_parents_city_address = new ArrayList<>();
+        List <String> list_of_parents_province_address = new ArrayList<>();
+        List <Integer> list_of_parents_zip_code_address = new ArrayList<>();
+        List <String> list_of_parents_country_address = new ArrayList<>();
+
+
 
 
         get("/greet", (req, res) -> "<h1>Hello World</h1>");// if a keyword is specified in the url
@@ -75,6 +92,21 @@ public class App {
             String add_student_country_address = req.queryParams("element_5_6");
 
 
+            // parent spouse guardian
+            String add_parent_number =req.queryParams("element_10_01");
+            /*String*/ add_parent_number +=req.queryParams("element_10_02");
+            /*String*/ add_parent_number +=req.queryParams("element_10_03");
+            String add_parents_email_address = req.queryParams("element_14_120");
+            String add_parents_street_address = req.queryParams("element_5_01");
+            String add_parents_suburb_address = req.queryParams("element_5_02");
+            String add_parents_city_address = req.queryParams("element_5_03");
+            String add_parents_province_address = req.queryParams("element_5_04");
+            String add_parents_zip_code_address = req.queryParams("element_5_05");
+            String add_parents_country_address = req.queryParams("element_5_06");
+
+
+
+
 
 
             // adding data from the input
@@ -92,6 +124,17 @@ public class App {
             school_form_map.put("add_student_province_address",add_student_province_address);
             school_form_map.put("add_student_zip_code",add_student_zip_code);
             school_form_map.put("add_student_country_address",add_student_country_address);
+
+            // parent spouse guardian
+            school_form_map.put("add_parent_number",add_parent_number);
+            school_form_map.put("add_parents_email_address",add_parents_email_address);
+            school_form_map.put("add_parents_street_address",add_parents_street_address);
+            school_form_map.put("add_parents_suburb_address",add_parents_suburb_address);
+            school_form_map.put("add_parents_city_address",add_parents_city_address);
+            school_form_map.put("add_parents_province_address",add_parents_province_address);
+            school_form_map.put("add_parents_zip_code_address",add_parents_zip_code_address);
+            school_form_map.put("add_parents_country_address",add_parents_country_address);
+
 
 
 
@@ -112,6 +155,19 @@ public class App {
             list_of_provinc_address_for_student.add(add_student_province_address);
             list_of_zip_codes_for_students.add(Integer.parseInt(add_student_zip_code));
             list_of_countries_address_for_students.add(add_student_country_address);
+
+            // parent spouse guardian
+            list_of_parent_numbers.add(Integer.parseInt(add_parent_number));
+            list_of_parents_email_address.add(add_parents_email_address);
+            list_of_parents_street_address.add(add_parents_street_address);
+            list_of_parents_suburb_address.add(add_parents_suburb_address);
+            list_of_parents_city_address.add(add_parents_city_address);
+            list_of_parents_province_address.add(add_parents_province_address);
+            list_of_parents_zip_code_address.add(Integer.parseInt(add_parents_zip_code_address));
+            list_of_parents_country_address.add(add_parents_country_address);
+
+
+
 
 
 
@@ -134,6 +190,20 @@ public class App {
 
 
 
+            // parent spouse guardian
+            school_form_map.put("list_of_parent_numbers",list_of_parent_numbers);
+            school_form_map.put("list_of_parents_email_address",list_of_parents_email_address);
+            school_form_map.put("list_of_parents_street_address",list_of_parents_street_address);
+            school_form_map.put("list_of_parents_suburb_address",list_of_parents_suburb_address);
+            school_form_map.put("list_of_parents_city_address",list_of_parents_city_address);
+            school_form_map.put("list_of_parents_province_address",list_of_parents_province_address);
+            school_form_map.put("list_of_parents_zip_code_address",list_of_parents_zip_code_address);
+            school_form_map.put("list_of_parents_country_address",list_of_parents_country_address);
+
+
+
+
+
 
             System.out.println(list_of_students_names_names.toString()+ " these are the names");
             System.out.println(list_of_students_surnames.toString()+ " these are surnames");
@@ -149,6 +219,16 @@ public class App {
             System.out.println(list_of_provinc_address_for_student.toString() + " province");
             System.out.println(list_of_zip_codes_for_students.toString() + "zip code");
             System.out.println(list_of_countries_address_for_students.toString() + " country");
+
+            System.out.println(list_of_parent_numbers.toString() + "parents number");
+            System.out.println(list_of_parents_email_address.toString() + " parents email");
+            System.out.println(list_of_parents_street_address.toString() + " STREET ADDRESS");
+            System.out.println(list_of_parents_suburb_address.toString() + " SUBURB");
+            System.out.println(list_of_parents_city_address.toString()+ " city");
+            System.out.println(list_of_parents_province_address.toString() + " province");
+            System.out.println(list_of_parents_zip_code_address.toString() + " zip codes");
+            System.out.println(list_of_parents_country_address.toString() + " country");
+
 
 
             return new HandlebarsTemplateEngine().render(new ModelAndView(school_form_map, "addstudent.handlebars"));
