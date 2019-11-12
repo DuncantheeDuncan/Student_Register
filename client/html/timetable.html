@@ -18,66 +18,7 @@
 		var sec;
 		var number;
 		var name_of_mudule;
-		var timeTable = {
-			Byron: {
-				Monday: ["Networks 511", "Information System 511","Break",
-					"Consultation", "Manangement Information System 500","Break", "Consultation", "Consultation",
-					"Networks 631"
-				],
-				Tuesday: ["Management Information System 500", "Consultation","Break", "Consutation", "Networks 511","Break",
-					"Information System 511",
-					"Consultation", "Consultation"
-				],
-				Wednesday: ["Information systems 511",
-					"Programming 511 ","Break",
-					"Web technology 511 ",
-					"Networks 511","Break",
-					"Mathematics 511","Information System 511",
-					"Consultation"
-				],
-				Thursday: ["Management Information System 500", "Consultation","Break", "Consutation", "Networks 511","Break",
-					"Information System 511",
-					"Consultation", "Consultation"],
-				Friday: ["Networks 511", "Information System 511","Break",
-					"Consultation", "Manangement Information System 500","Break","Consultation", "Consultation",
-					"Networks 631"]
-			},
-			Nolwazi: {
-				Monday: [],
-				Tuesday: [],
-				Wednesday: [],
-				Thursday: [],
-				Friday: []
-			},
-			Tatenda: {
-				Monday: [],
-				Tuesday: [],
-				Wednesday: [],
-				Thursday: [],
-				Friday: []
-			},
-			Tinashe: {
-				Monday: [],
-				Tuesday: [],
-				Wednesday: [],
-				Thursday: [],
-				Friday: []
-			},
-			Travor: {
-				Monday: [],
-				Tuesday: [],
-				Wednesday: [],
-				Thursday: [],
-				Friday: []
-			},
-			Sisa: {
-				Monday: [],
-				Tuesday: [],
-				Wednesday: [],
-				Thursday: [],
-				Friday: []
-			}
-		};
+
 
 
 		window.onload = function () {
@@ -106,89 +47,74 @@
 			if (hours >= 9 && minutes >= 30) { //Module 1
 				sec = 4000;
 				number = 1;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-				var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
+
 			}
 			/*else */
 			if (hours >= 10 && minutes >= 30) { //Module 2
 				sec = 4000;
 				number = 2;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-				var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
+
 			}
 			/*else*/
 			if (hours >= 10 && minutes >= 45) { //break 3
 				sec = 4000;
 				number = 3;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-				var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
 			/*else*/
 			if (hours >= 11 && minutes >= 45) { //Module 4
 				sec = 4000;
 				number = 4;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-					var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
 			/*else*/
 			if (hours >= 12 && minutes >= 45) { //Module 5
 				sec = 4000;
 				number = 5;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-					var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
 			/*else*/
 			if (hours >= 13 && minutes >= 30) { //break 6
 				sec = 4000;
 				number = 6;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-					var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
 			if (hours >= 14 && minutes >= 30) { //Module 7
 				sec = 4000;
 				number = 7;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-					var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
 			if (hours >= 15 && minutes >= 30) { //Module 8
 				sec = 4000;
 				number = 8;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-					var active = "active".charAt(number) ;
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
 			if (hours >= 16 && minutes >= 30) { //Module 9
 				sec = 4000;
 				number = 9;
-				name_of_mudule = "#active"
+				name_of_mudule = "#active";
 				var i = name_of_mudule + number;
-				var active = "active" + number
 				fade(i, sec);
-				document.getElementById(active).innerHTML= number + "   " + timeTable.Byron.Monday[number];
 			}
+
 
 			console.log({
 				i,
@@ -197,21 +123,18 @@
 				minutes
 			});
 
+
 		}
+
+
+
 
 		function fade(i, sec) {
 			$(document).ready(function () {
 				setTimeout(function () {
-
-					$(i).hide("2000")
+					$(i).hide("2000");
 				}, sec);
-
 			});
-
-		}
-
-
-		function getTimeTable() {
 
 		}
 	</script>
