@@ -56,11 +56,6 @@ public class AddStudents{
 
 
 
-
-        // get("/greet", (req, res) -> "<h1>Hello World</h1>");// if a keyword is specified in the url
-        // post("/greet", ((request, response) -> "hello, Duncan"));// testing if only a link is typed
-
-
         get("/addstudent", (req, res) -> {
             Map<String, Object> school_form_map = new HashMap<>();
             return new HandlebarsTemplateEngine().render(new ModelAndView(school_form_map, "addstudent.handlebars"));
@@ -165,10 +160,6 @@ public class AddStudents{
 
 
 
-
-
-
-
             // adding names from the list to the Map
             school_form_map.put("list_of_students_surnames",list_of_students_surnames);
             school_form_map.put("list_of_students_names",list_of_students_names);
@@ -234,8 +225,6 @@ public class AddStudents{
 
 
 
-
-
         get("/hello",(req, res) ->{
             Map<String, Object> map = new HashMap<>();
             return new HandlebarsTemplateEngine().render(new ModelAndView(map, "hello.handlebars"));
@@ -256,39 +245,5 @@ public class AddStudents{
 
     }
 
-//    public static void main(String[] args) {
-//
-//
-//
-<<<<<<< HEAD:src/main/java/App.java
-//        get("/greet", (req, res) -> "<h1>Hello World</h1>");
-//
-//        post("/greet", ((request, response) -> "hello, Duncan"));
-//
-//
-//
-//        get("/confirm", (req, res) -> {
-//            Map<String, Object> map = new HashMap<>();
-
-//            return new HandlebarsTemplateEngine().render(new ModelAndView(map, "confirm.handlebars"));
-//        });// if a keyword is specified in the url
-//        post("/confirm", ((request, response) -> {
-//            Map<String, Object> map = new HashMap<>();
-//
-//            map.put("names",names);
-//            System.out.println(names.toString()+ " these are the names");
-//
-//            return new HandlebarsTemplateEngine().render(new ModelAndView(map, "confirm.handlebars"));
-//        }));// testing if only a link is typed
-//
-//
-
-
     }
 
-
-}
-=======
-//    }
-}
->>>>>>> cfc88e40e339c768167cce3ce0d40afbf4cc713c:src/main/java/routes/AddStudents.java

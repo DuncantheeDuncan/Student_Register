@@ -1,0 +1,131 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/index.js" type="text/javascript"></script>
+    <title>------|------</title>
+    <style>
+ #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  /* background-image:1px; */
+  /* background-image: url('search.png'); */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: auto; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: auto; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #d8d6d6;
+}
+#myTable{
+  /*  */
+}
+#myTable li {
+   Add a bottom border to all table rows
+  border-bottom: 1px solid #ddd;
+}
+#myTable li {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+    </style>
+</head>
+<body>
+<h1>Greet me</h1>
+
+<form action="/studentlist" method="post">
+    <input type="text" name="username">
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:auto;">Emp Number</th>
+            <th style="width:auto;">Name</th>
+            <th style="width:auto;">Surname</th>
+            <th style="width:auto;">Percentage %</th>
+        </tr>
+
+
+
+        {{#each school_form_map}}
+            <tr>
+                <td>
+                    <ul>
+                        <li style="list-style: none">{{this}}</li>
+                    </ul>
+                </td>
+            </tr>
+        {{/each}}
+
+
+
+        <tr>
+            <td>
+                <ul>
+                    <li>jack</li>
+                </ul>
+            </td>
+            <td>
+
+                <ul>
+                    <li>jack</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>jack</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>jack</li>
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+    {{school_form_map}}
+
+
+    <ul>
+        {{#each list_of_students_names_names}}
+            <li>NAME: {{this}}</li>
+        {{/each}}
+
+    </ul>
+
+
+    <input type="submit" >
+
+</form>
+
+<!--    {{greeting}}-->
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">
+
+</body>
+</html>

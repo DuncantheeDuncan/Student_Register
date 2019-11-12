@@ -1,201 +1,155 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/index.js" type="text/javascript"></script>
-<title>------|------</title>
-    <style>
- #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  /* background-image:1px; */
-  /* background-image: url('search.png'); */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: auto; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
-#myTable {
-  border-collapse: collapse; /* Collapse borders */
-  width: auto; /* Full-width */
-  border: 1px solid #ddd; /* Add a grey border */
-  font-size: 18px; /* Increase font-size */
-}
-
-#myTable th, #myTable td {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
-}
-
-#myTable tr {
-  /* Add a bottom border to all table rows */
-  border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  /* Add a grey background color to the table header and on hover */
-  background-color: #d8d6d6;
-}
-#myTable{
-  /*  */
-}
 
 
-#myTable li {
-   Add a bottom border to all table rows 
-  border-bottom: 1px solid #ddd;
-}
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <script src="js/index.js" type="text/javascript"></script>-->
+<!--    <title>------|------</title>-->
+<!--    <style>-->
+<!-- #myInput {-->
+<!--  background-image: url('/css/searchicon.png'); /* Add a search icon to input */-->
+<!--  /* background-image:1px; */-->
+<!--  /* background-image: url('search.png'); */-->
+<!--  background-position: 10px 12px; /* Position the search icon */-->
+<!--  background-repeat: no-repeat; /* Do not repeat the icon image */-->
+<!--  width: auto; /* Full-width */-->
+<!--  font-size: 16px; /* Increase font-size */-->
+<!--  padding: 12px 20px 12px 40px; /* Add some padding */-->
+<!--  border: 1px solid #ddd; /* Add a grey border */-->
+<!--  margin-bottom: 12px; /* Add some space below the input */-->
+<!--}-->
+<!--#myTable {-->
+<!--  border-collapse: collapse; /* Collapse borders */-->
+<!--  width: auto; /* Full-width */-->
+<!--  border: 1px solid #ddd; /* Add a grey border */-->
+<!--  font-size: 18px; /* Increase font-size */-->
+<!--}-->
+<!--#myTable th, #myTable td {-->
+<!--  text-align: left; /* Left-align text */-->
+<!--  padding: 12px; /* Add padding */-->
+<!--}-->
+<!--#myTable tr {-->
+<!--  /* Add a bottom border to all table rows */-->
+<!--  border-bottom: 1px solid #ddd;-->
+<!--}-->
+<!--#myTable tr.header, #myTable tr:hover {-->
+<!--  /* Add a grey background color to the table header and on hover */-->
+<!--  background-color: #d8d6d6;-->
+<!--}-->
+<!--#myTable{-->
+<!--  /*  */-->
+<!--}-->
+<!--#myTable li {-->
+<!--   Add a bottom border to all table rows-->
+<!--  border-bottom: 1px solid #ddd;-->
+<!--}-->
+<!--#myTable li {-->
+<!--  text-align: left; /* Left-align text */-->
+<!--  padding: 12px; /* Add padding */-->
+<!--}-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Greet me</h1>-->
+
+<!--<form action="/hello" method="post">-->
+<!--&lt;!&ndash;    <input type="text" name="username">&ndash;&gt;-->
 
 
-
-#myTable li {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
-}
-    </style>
-</head>
-<body>
-    <h1>Greet me</h1>
-
-    <form action="/hello" method="post">
-        <input type="text" name="username">
-        <input type="submit" >
-
-        <table id="myTable">
-          <tr class="header">
-              <th style="width:auto;">Emp Number</th>
-            <th style="width:auto;">Name</th>
-            <th style="width:auto;">Surname</th>
-            <th style="width:auto;">Percentage %</th>
-          </tr>
-
-<!--            <li style="list-style: none">{{#each names}}</li>-->
-<!--                <li style="list-style: none">{{this}}</li>-->
-<!--            <li style="list-style: none">{{/each}}</li>-->
-
-{{#each names}}
-          <tr>
-            <td>
-              <ul>
-                <li style="list-style: none">{{this}}</li>
-          </ul>
-        </td>
-        </tr>
-         {{/each}}
-
-{{!--         <td> --}}
-
-{{!--           <ul> --}}
-{{!--             <li>{{#each names}}<li> --}}
-{{!--           </ul> --}}
-{{!--         </td> --}}
-{{!--         <td> --}}
-{{!--            <ul> --}}
-{{!--             <li>{{#each names}}</li> --}}
-{{!--           </ul> --}}
-{{!--         </td> --}}
-{{!--         <td> --}}
-{{!--           <ul> --}}
-{{!--                 <li>{{#each names}}</li> --}}
-{{!--           </ul> --}}
-{{!--         </td> --}}
-{{!--           </tr> --}}
-
-
-        <tr>
-            <td>
-              <ul>
-            <li>jack</li>
-          </ul>
-        </td>
-        <td>
-
-          <ul>
-            <li>jack</li>
-          </ul>
-        </td>
-        <td>
-           <ul>
-            <li>jack</li>
-          </ul>
-        </td>
-        <td>
-          <ul>
-                <li>jack</li>
-          </ul>
-        </td>
-          </tr>
-
-         </table>
-
-
-</form>
-        
-
-
-
-
-{{!--             <ul> --}}
-<!--            <li style="list-style: none">{{#each names}}</li>-->
-<!--                <li style="list-style: none">{{this}}</li>-->
-<!--            <li style="list-style: none">{{/each}}</li>-->
-{{!--             </ul> --}}
-
-{{!--         </div> --}}
-
-{{!--     </form> --}}
-
-
-<!--    {{greeting}}-->
-
-
-<<<<<<< HEAD
-    <table id="myTable">
-        <tr class="header">
-            <th style="width:auto;">Student no.</th>
-            <th style="width:auto;">Name</th>
-            <th style="width:auto;">Surname</th>
-            <th style="width:auto;">Percentage %</th>
-        </tr>
-        <tr >
-
-
-            <td>119489
-                <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
-            </td>
-            <td>Phumlani</td>
-            <td>Mthembu</td>
-            <td>68%</td>
-        </tr>
-
-        {{#each map}}
-            {{#each greetngs}}
-                <td>{{names}}</td>
-            {{/each}}
-
-        {{/each}}
-<!--        <tr>-->
-
-<!--            <li style="list-style: none">{{#each names}}</li>-->
-<!--            <td>-->
-<!--                <li style="list-style: none">{{this}}</li>-->
-
-<!--            </td>-->
-<!--            <li style="list-style: none">{{/each}}</li>-->
-<!--                <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>-->
-
+<!--    <table id="myTable">-->
+<!--        <tr class="header">-->
+<!--            <th style="width:auto;">Emp Number</th>-->
+<!--            <th style="width:auto;">Name</th>-->
+<!--            <th style="width:auto;">Surname</th>-->
+<!--            <th style="width:auto;">Percentage %</th>-->
 <!--        </tr>-->
-    </table>
-=======
 
->>>>>>> cfc88e40e339c768167cce3ce0d40afbf4cc713c
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">
+<!--            &lt;!&ndash;            <li style="list-style: none">{{#each names}}</li>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <li style="list-style: none">{{this}}</li>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <li style="list-style: none">{{/each}}</li>&ndash;&gt;-->
 
-</body>
-</html>
+<!--        {{#each names}}-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <ul>-->
+<!--                        <li style="list-style: none">{{this}}</li>-->
+<!--                    </ul>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        {{/each}}-->
+
+<!--        {{!--         <td> --}}-->
+
+<!--        {{!--           <ul> --}}-->
+<!--        {{!--             <li>{{#each names}}<li> --}}-->
+<!--        {{!--           </ul> --}}-->
+<!--        {{!--         </td> --}}-->
+<!--        {{!--         <td> --}}-->
+<!--        {{!--            <ul> --}}-->
+<!--        {{!--             <li>{{#each names}}</li> --}}-->
+<!--        {{!--           </ul> --}}-->
+<!--        {{!--         </td> --}}-->
+<!--        {{!--         <td> --}}-->
+<!--        {{!--           <ul> --}}-->
+<!--        {{!--                 <li>{{#each names}}</li> --}}-->
+<!--        {{!--           </ul> --}}-->
+<!--        {{!--         </td> --}}-->
+<!--        {{!--           </tr> --}}-->
+
+
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <ul>-->
+<!--                    <li>jack</li>-->
+<!--                </ul>-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--                <ul>-->
+<!--                    <li>jack</li>-->
+<!--                </ul>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <ul>-->
+<!--                    <li>jack</li>-->
+<!--                </ul>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <ul>-->
+<!--                    <li>jack</li>-->
+<!--                </ul>-->
+<!--            </td>-->
+<!--        </tr>-->
+
+<!--    </table>-->
+
+<!--    <input type="submit" >-->
+<!--</form>-->
+
+
+
+
+
+<!--{{!--             <ul> --}}-->
+<!--        &lt;!&ndash;            <li style="list-style: none">{{#each names}}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li style="list-style: none">{{this}}</li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li style="list-style: none">{{/each}}</li>&ndash;&gt;-->
+<!--{{!--             </ul> --}}-->
+
+<!--{{!--         </div> --}}-->
+
+<!--{{!--     </form> --}}-->
+
+
+<!--&lt;!&ndash;    {{greeting}}&ndash;&gt;-->
+
+
+
+<!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">-->
+
+<!--</body>-->
+<!--</html>-->
