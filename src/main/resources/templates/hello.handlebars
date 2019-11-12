@@ -8,7 +8,7 @@
     <script src="js/index.js" type="text/javascript"></script>
 <title>------|------</title>
     <style>
-#myInput {
+ #myInput {
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   /* background-image:1px; */
   /* background-image: url('search.png'); */
@@ -46,6 +46,18 @@
   /*  */
 }
 
+
+#myTable li {
+   Add a bottom border to all table rows 
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+#myTable li {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
     </style>
 </head>
 <body>
@@ -55,87 +67,95 @@
         <input type="text" name="username">
         <input type="submit" >
 
+        <table id="myTable">
+          <tr class="header">
+              <th style="width:auto;">Emp Number</th>
+            <th style="width:auto;">Name</th>
+            <th style="width:auto;">Surname</th>
+            <th style="width:auto;">Percentage %</th>
+          </tr>
 
-        <div>
-
-
-            <table>
-                <tr>
-                    <th>Month</th>
-                    <th>Savings</th>
-                </tr>
-
-<tr>
-    <td>
-    <li style="list-style: none">{{#each names}}</li>
-        <li style="list-style: none">{{this}}</li>
-    <li style="list-style: none">{{/each}}</li>
-    </td>
-
-
-    <td>
-    <li style="list-style: none">{{#each names}}</li>
-        <li style="list-style: none">{{this}}</li>
-    <li style="list-style: none">{{/each}}</li>
-    </td>
-</tr>
-            </table>
-
-
-
-
-            <ul>
 <!--            <li style="list-style: none">{{#each names}}</li>-->
 <!--                <li style="list-style: none">{{this}}</li>-->
 <!--            <li style="list-style: none">{{/each}}</li>-->
-            </ul>
 
-        </div>
+{{#each names}}
+          <tr>
+            <td>
+              <ul>
+                <li style="list-style: none">{{this}}</li>
+          </ul>
+        </td>
+        </tr>
+         {{/each}}
 
-    </form>
+{{!--         <td> --}}
+
+{{!--           <ul> --}}
+{{!--             <li>{{#each names}}<li> --}}
+{{!--           </ul> --}}
+{{!--         </td> --}}
+{{!--         <td> --}}
+{{!--            <ul> --}}
+{{!--             <li>{{#each names}}</li> --}}
+{{!--           </ul> --}}
+{{!--         </td> --}}
+{{!--         <td> --}}
+{{!--           <ul> --}}
+{{!--                 <li>{{#each names}}</li> --}}
+{{!--           </ul> --}}
+{{!--         </td> --}}
+{{!--           </tr> --}}
+
+
+        <tr>
+            <td>
+              <ul>
+            <li>jack</li>
+          </ul>
+        </td>
+        <td>
+
+          <ul>
+            <li>jack</li>
+          </ul>
+        </td>
+        <td>
+           <ul>
+            <li>jack</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+                <li>jack</li>
+          </ul>
+        </td>
+          </tr>
+
+         </table>
+
+
+</form>
+        
+
+
+
+
+{{!--             <ul> --}}
+<!--            <li style="list-style: none">{{#each names}}</li>-->
+<!--                <li style="list-style: none">{{this}}</li>-->
+<!--            <li style="list-style: none">{{/each}}</li>-->
+{{!--             </ul> --}}
+
+{{!--         </div> --}}
+
+{{!--     </form> --}}
 
 
 <!--    {{greeting}}-->
 
 
-    <table id="myTable">
-        <tr class="header">
-            <th style="width:auto;">Student no.</th>
-            <th style="width:auto;">Name</th>
-            <th style="width:auto;">Surname</th>
-            <th style="width:auto;">Percentage %</th>
-        </tr>
-        <tr >
 
-
-            <td>119489
-                <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
-            </td>
-            <td>Phumlani</td>
-            <td>Mthembu</td>
-            <td>68%</td>
-        </tr>
-        <tr>
-            <td>
-            <li style="list-style: none">{{#each names}}</li>
-                <li style="list-style: none">{{this}}</li>
-            <li style="list-style: none">{{/each}}</li>
-                <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
-            </td>
-            <td>
-            <li style="list-style: none">{{#each names}}</li>
-                <li style="list-style: none">{{this}}</li>
-            <li style="list-style: none">{{/each}}</li>
-            </td>
-
-            <td>
-                nothing
-            </td>
-            <td>
-          nothing
-            </td>
-        </tr>
-    </table>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">
 
 </body>
