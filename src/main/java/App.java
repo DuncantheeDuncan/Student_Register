@@ -268,7 +268,7 @@ public class App {
 //
 //        get("/confirm", (req, res) -> {
 //            Map<String, Object> map = new HashMap<>();
-//
+
 //            return new HandlebarsTemplateEngine().render(new ModelAndView(map, "confirm.handlebars"));
 //        });// if a keyword is specified in the url
 //        post("/confirm", ((request, response) -> {

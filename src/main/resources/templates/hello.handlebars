@@ -115,26 +115,24 @@
             <td>Mthembu</td>
             <td>68%</td>
         </tr>
-        <tr>
-            <td>
-            <li style="list-style: none">{{#each names}}</li>
-                <li style="list-style: none">{{this}}</li>
-            <li style="list-style: none">{{/each}}</li>
-                <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
-            </td>
-            <td>
-            <li style="list-style: none">{{#each names}}</li>
-                <li style="list-style: none">{{this}}</li>
-            <li style="list-style: none">{{/each}}</li>
-            </td>
 
-            <td>
-                nothing
-            </td>
-            <td>
-          nothing
-            </td>
-        </tr>
+        {{#each map}}
+            {{#each greetngs}}
+                <td>{{names}}</td>
+            {{/each}}
+
+        {{/each}}
+<!--        <tr>-->
+
+<!--            <li style="list-style: none">{{#each names}}</li>-->
+<!--            <td>-->
+<!--                <li style="list-style: none">{{this}}</li>-->
+
+<!--            </td>-->
+<!--            <li style="list-style: none">{{/each}}</li>-->
+<!--                <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>-->
+
+<!--        </tr>-->
     </table>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">
 
