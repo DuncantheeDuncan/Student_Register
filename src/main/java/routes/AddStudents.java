@@ -1,3 +1,4 @@
+package routes;
 
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -9,10 +10,10 @@ import java.util.Map;
 
 import static spark.Spark.*;
 
-public class App {
+public class AddStudents{
 
-    public static void main(String[] args) {
-        port(8080);// Spark will run on port 8080
+    public void runStudent(){
+//        port(8080);// Spark will run on port 8080
 //        initExceptionHandler((e) -> System.out.println("Uh-oh"));
         // root is 'src/main/resources', so put files in 'src/main/resources/public'
         //      res.redirect("/hello"); // redirect a page!!!
@@ -20,18 +21,14 @@ public class App {
 
 //TODO: static files
 
-        staticFiles.location("/public");
-        staticFiles.location("/templates");
-        staticFiles.location("/templates");
-        staticFiles.location("/templates/js");
-
-
+//        staticFiles.location("/public");
+//        staticFiles.location("/templates");
 
 
 
 //TODO:  HASH-MAPS  / LIST
         List <String> names = new ArrayList<>();
-        List <String> list_of_students_names_names = new ArrayList<>();
+        List <String> list_of_students_names = new ArrayList<>();
         List <String> list_of_students_surnames = new ArrayList<>();
         List <String> list_of_students_middle_names = new ArrayList<>();
         List <Integer> list_of_students_numbers = new ArrayList<>();
@@ -60,8 +57,8 @@ public class App {
 
 
 
-        get("/greet", (req, res) -> "<h1>Hello World</h1>");// if a keyword is specified in the url
-        post("/greet", ((request, response) -> "hello, Duncan"));// testing if only a link is typed
+        // get("/greet", (req, res) -> "<h1>Hello World</h1>");// if a keyword is specified in the url
+        // post("/greet", ((request, response) -> "hello, Duncan"));// testing if only a link is typed
 
 
         get("/addstudent", (req, res) -> {
@@ -142,7 +139,7 @@ public class App {
 
             // adding names to the list from html inputs fields
             list_of_students_surnames.add(add_student_surname);
-            list_of_students_names_names.add(add_student_name);
+            list_of_students_names.add(add_student_name);
             list_of_students_middle_names.add(add_student_middle_name);
             list_of_students_numbers.add(Integer.parseInt(add_student_number));
             list_of_students_titles.add(add_student_title);
@@ -174,7 +171,7 @@ public class App {
 
             // adding names from the list to the Map
             school_form_map.put("list_of_students_surnames",list_of_students_surnames);
-            school_form_map.put("list_of_students_names_names",list_of_students_names_names);
+            school_form_map.put("list_of_students_names",list_of_students_names);
             school_form_map.put("list_of_students_middle_names",list_of_students_middle_names);
             school_form_map.put("list_of_students_numbers",list_of_students_numbers);
             school_form_map.put("list_of_students_titles",list_of_students_titles);
@@ -205,7 +202,7 @@ public class App {
 
 
 
-            System.out.println(list_of_students_names_names.toString()+ " these are the names");
+            System.out.println(list_of_students_names.toString()+ " these are the names");
             System.out.println(list_of_students_surnames.toString()+ " these are surnames");
             System.out.println(list_of_students_middle_names.toString()+ " these are the middle names");
             System.out.println(list_of_students_numbers.toString()+ " Student number");
@@ -257,9 +254,13 @@ public class App {
         });
 
 
+    }
+
+//    public static void main(String[] args) {
 //
 //
 //
+<<<<<<< HEAD:src/main/java/App.java
 //        get("/greet", (req, res) -> "<h1>Hello World</h1>");
 //
 //        post("/greet", ((request, response) -> "hello, Duncan"));
@@ -287,3 +288,7 @@ public class App {
 
 
 }
+=======
+//    }
+}
+>>>>>>> cfc88e40e339c768167cce3ce0d40afbf4cc713c:src/main/java/routes/AddStudents.java
