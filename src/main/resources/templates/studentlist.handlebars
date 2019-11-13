@@ -57,75 +57,111 @@
 <h1>Greet me</h1>
 
 <form action="/studentlist" method="post">
-    <input type="text" name="username">
-
+<!---->
     <table id="myTable">
         <tr class="header">
-            <th style="width:auto;">Emp Number</th>
+            <th style="width:auto;">Student Number</th>
             <th style="width:auto;">Name</th>
             <th style="width:auto;">Surname</th>
             <th style="width:auto;">Percentage %</th>
         </tr>
 
 
+<!-- ONLY DISPLAY ONCE-->
 
-        {{#each school_form_map}}
-            <tr>
-                <td>
+<!--           <tr>-->
+<!--        {{#each studentnumbers}}-->
+<!--               <td>-->
+<!--                   {{this}}-->
+<!--               </td>-->
+<!--        {{/each}}-->
+<!--               {{#each student_names}}-->
+<!--                   <td>-->
+<!--                       {{this}}-->
+<!--                   </td>-->
+<!--               {{/each}}-->
+<!--               {{#each student_surnames}}-->
+<!--                   <td>-->
+<!--                       {{this}}-->
+<!--                   </td>-->
+<!--               {{/each}}-->
+<!--           </tr>-->
+
+        <tr>
+
+
+                    <td>
+                        {{#each studentnumbers}}
+                        <ul>
+                            <label class="main"><input id="table_cell" class="main" type="checkbox"><span class="geekmark"></span></label>
+                            <li style="list-style: none">{{this}}</li>
+                        </ul>
+                        {{/each}}
+                    </td>
+
+            <td>
+                {{#each student_names}}
                     <ul>
                         <li style="list-style: none">{{this}}</li>
                     </ul>
-                </td>
-            </tr>
-        {{/each}}
+                {{/each}}
+            </td>
+            <td>
+                {{#each student_surnames}}
+                    <ul>
+                        <li style="list-style: none">{{this}}</li>
+                    </ul>
+                {{/each}}
+            </td>
+
+
+<!--        </tr>-->
 
 
 
-        <tr>
-            <td>
-                <ul>
-                    <li>jack</li>
-                </ul>
-            </td>
-            <td>
 
-                <ul>
-                    <li>jack</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>jack</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>jack</li>
-                </ul>
-            </td>
-        </tr>
+
+<!--        {{#each student_names}}-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    {{this}}-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        {{/each}}-->
+<!--        {{#each student_names}}-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <ul>-->
+<!--                        <li style="list-style: none">{{this}}</li>-->
+<!--                    </ul>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        {{/each}}-->
+
+
+<!--        {{#each student_surnames}}-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    {{this}}-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        {{/each}}-->
+
+
+
+<!--        {{#each student_surnames}}-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <ul>-->
+<!--                        <li style="list-style: none">{{this}}</li>-->
+<!--                    </ul>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        {{/each}}-->
+
 
     </table>
-    {{school_form_map}}
-
-
-    <ul>
-        {{#each list_of_students_names_names}}
-            <li>NAME: {{this}}</li>
-        {{/each}}
-
-    </ul>
-
-
-    <input type="submit" >
-
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">
 </form>
-
-<!--    {{greeting}}-->
-
-
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a name..">
-
 </body>
 </html>

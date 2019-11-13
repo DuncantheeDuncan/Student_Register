@@ -28,6 +28,31 @@ public class JDBCSTUDENTS {
     List<Integer> list_of_parent_numbers = new ArrayList<>();
     List<String> list_of_parents_email_address = new ArrayList<>();
 
+    private static final String SQL_INSERT = "INSERT INTO STUDENT (STUDENT_NUMBER, STUDENT_NAME, SECOND_NAME," +
+            "SURNAME, CONTACT, EMAIL, GENDER, TITLE,PARENT_CONTACT,PARENT_EMAIL) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    //    private static final String SQL_UPDATE = "UPDATE STUDENT SET SALARY=? WHERE NAME=?";
+//    String sql = "SELECT STUDENT_NUMBER ,STUDENT_NAME, SURNAME FROM STUDENT";
+
+
+    private static final String SQL_TABLE_CREATE = new StringBuilder()
+            .append("CREATE TABLE STUDENT")
+            .append("(")
+            .append("STUDENT_NUMBER integer not null primary key,")
+            .append("STUDENT_NAME VARCHAR(25),")
+            .append("SECOND_NAME VARCHAR(25),")
+            .append("SURNAME VARCHAR(25),")
+            .append("CONTACT integer,")
+            .append("EMAIL VARCHAR(25),")
+            .append("GENDER VARCHAR(7),")
+            .append("TITLE VARCHAR(5),")
+            .append("PARENT_CONTACT integer,")
+            .append("PARENT_EMAIL VARCHAR(25)")
+            .append(")")
+            .toString();
+
+    private static final String SQL_TABLE_DROP = "DROP TABLE STUDENT";
+
+
     public void runJDBCStudent() {
 
         get("/addstudent", (req, res) -> {
@@ -49,17 +74,12 @@ public class JDBCSTUDENTS {
             String add_student_gender = req.queryParams("element_15");
             String add_student_email = req.queryParams("element_14_10");
             String add_student_cellphone_number = req.queryParams("element_10_1");
-            /*String*/
             add_student_cellphone_number += req.queryParams("element_10_2");
-            /*String*/
             add_student_cellphone_number += req.queryParams("element_10_3");
-
 
             String add_parents_email_address = req.queryParams("element_14_120");
             String add_parent_number = req.queryParams("element_10_01");
-            /*String*/
             add_parent_number += req.queryParams("element_10_02");
-            /*String*/
             add_parent_number += req.queryParams("element_10_03");
 
 
@@ -114,7 +134,7 @@ public class JDBCSTUDENTS {
 
             try (Connection conn = DriverManager.getConnection(
                     "jdbc:postgresql://127.0.0.1:5432/onlineRegister", "coder", "pg123");
-                 Statement statement = conn.createStatement(); PreparedStatement psinsert = conn.prepareStatement("SQL_INSERT");
+                 Statement statement = conn.createStatement(); PreparedStatement psinsert = conn.prepareStatement(SQL_INSERT);
                  PreparedStatement psupdate = conn.prepareStatement("SQL_UPDATE")) {
 
                 if (conn != null) {
@@ -124,10 +144,10 @@ public class JDBCSTUDENTS {
                 }
 
 
-                statement.execute(SQL_TABLE_DROP);
-                statement.execute(SQL_TABLE_CREATE);
-                conn.setAutoCommit(true);
-// this line causes an error!
+//                statement.execute(SQL_TABLE_DROP); //JUST TO CLEAN THE DATABASE
+//                statement.execute(SQL_TABLE_CREATE);
+
+
                 psinsert.setInt(1, s_student_number);
                 psinsert.setString(2, add_student_name);
                 psinsert.setString(3, add_student_middle_name);
@@ -140,69 +160,17 @@ public class JDBCSTUDENTS {
                 psinsert.setString(10, add_parents_email_address);
                 psinsert.execute();
 
-                System.out.println(psinsert + "psnser");
-
-                conn.commit();
-
-                conn.setAutoCommit(true);
-
-//            (student_no, student_name, second_name," + "surname,contact,
-//            email,gender,title,parent_contact,parent_email)
-
-
-                ResultSet resultSet = statement.executeQuery(sql);
-                while (resultSet.next()) {
-                    int student_number = resultSet.getInt(s_number);
-                    String student_name = resultSet.getString("STUDENT_NAME");
-                    String second_name = resultSet.getString("SECOND_NAME");
-                    String surname = resultSet.getString("SURNAME");
-                    int contact = resultSet.getInt("CONTACT");
-                    String email = resultSet.getString("EMAIL");
-                    String gender = resultSet.getString("GENDER");
-                    String title = resultSet.getString("TITLE");
-                    int parent_contact = resultSet.getInt("PARENT_CONTACT");
-                    String parent_email = resultSet.getString("PARENT_EMAIL");
-
-
-                    System.out.println(psinsert + "while");
-                }
 
             } catch (SQLException e) {
                 System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+                e.printStackTrace();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
-//            school_form_map.put()
 
             return new HandlebarsTemplateEngine().render(new ModelAndView(school_form_map, "addstudent.handlebars"));
         });
     }
 
-
-    private static final String SQL_INSERT = "INSERT INTO STUDENT (STUDENT_NUMBER, STUDENT_NAME, SECOND_NAME," +
-            "SURNAME, CONTACT, EMAIL, GENDER, TITLE,PARENT_CONTACT,PARENT_EMAIL) VALUES (?,?,?,?,?,?,?,?,?,?)";
-    //    private static final String SQL_UPDATE = "UPDATE STUDENT SET SALARY=? WHERE NAME=?";
-    String sql = "SELECT * FROM STUDENT";
-
-
-    private static final String SQL_TABLE_CREATE = new StringBuilder()
-            .append("CREATE TABLE STUDENT")
-            .append("(")
-            .append("STUDENT_NUMBER integer not null primary key,")
-            .append("STUDENT_NAME VARCHAR(12),")
-            .append("SECOND_NAME VARCHAR(12),")
-            .append("SURNAME VARCHAR(12),")
-            .append("CONTACT integer,")
-            .append("EMAIL VARCHAR(12),")
-            .append("GENDER VARCHAR(7),")
-            .append("TITLE VARCHAR(5),")
-            .append("PARENT_CONTACT integer,")
-            .append("PARENT_EMAIL VARCHAR(12)")
-            .append(")")
-            .toString();
-
-    private static final String SQL_TABLE_DROP = "DROP TABLE STUDENT";
 
 }
