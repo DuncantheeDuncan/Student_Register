@@ -7,23 +7,83 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="formAdmin.css" media="all">
 	<script type="text/javascript" src="view.js"></script>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<!-- <script src="home.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="Home_page.css" media="all">
 	<title>Home admin</title>
 </head>
 
 <body id="main_body" class="safari">
- <div>
-	<img id="logo" src="../../images/Richfield_Blue_Final.png">
- </div>
+ <div class="slideshow-container">
+	<!-- Full-width images with number and caption text -->
+<a href="lectures-list.html">	<div class="nature" class="mySlides fade">
+	  <img src="b.png">
+	  <div class="text">ADD</div>
+	</div>
+</a>
+  <a href="add_lecturer.html">
+	<div class="nature" class="mySlides fade">
+	  <img src="a.png">
+	  <div class="text">DELETE</div>
+	</div>
+</a>
+<a href="delet-student-lecturer.html">
+	<div class="nature" class="mySlides fade">
+	  <img src="c.png">
+	  <div class="text">SEARCH</div>
+	</div>
+</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script>
+ w3.slideshow(".nature", 4500);
+  </script>
  <div class= "logout">
-	 <a href="../../index.html"></a>
-	<button class="logout_button" type="submit" onclick="logout()">logout</button>
+	 <!-- <a href="../../index.html"></a> -->
+	<button class="logout_button" type="submit" onclick="logout()">LOGOUT</button>
  </div>
  <script>
+	 var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
 	 function logout(){
+		Window.open("../../index.html");
+		alert("hi there");
+		 window.close("administrator.html");
+		 alert("hi there");
 		
-		 window.close();
-		Window.open("/root/Student_Register/client/index.html");
 		alert("hi there");
 		// window.close();
 		

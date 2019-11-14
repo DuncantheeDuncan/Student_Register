@@ -6,13 +6,15 @@
 	/* border: 2px solid black; */
 
 }
+
 #logo_container{
-	width: 100%;
-	padding-bottom: 20px;
-	position: relative;
+	width: 60%;
+	height: 101px;
+	margin-left:20%;
 }
 #Logo{
 	width: 100%;
+	height: 100px;
 }
 .main_div{
 	text-align: center;
