@@ -1,11 +1,11 @@
-package db;
-
-import java.sql.*;
-
-public class JDBCDrive {
-
-    public  static void main(String[] args) {
-
+//package db;
+//
+//import java.sql.*;
+//
+//public class JDBCDrive {
+//
+//    public  static void main(String[] args) {
+//
 //        try (Connection conn = DriverManager.getConnection(
 //                "jdbc:postgresql://127.0.0.1:5432/onlineRegister", "coder", "pg123");
 //             Statement statement = conn.createStatement(); PreparedStatement psinsert = conn.prepareStatement("SQL_INSERT");
@@ -18,7 +18,7 @@ public class JDBCDrive {
 //            }
 //
 ////            statement.execute(SQL_TABLE_DROP);
-//            statement.execute(SQL_TABLE_CREATE);
+////            statement.execute(SQL_TABLE_CREATE);
 //
 //            conn.setAutoCommit(false);
 //
@@ -52,6 +52,7 @@ public class JDBCDrive {
 //            .toString();
 //
 //    private static final String SQL_TABLE_DROP = "DROP TABLE STUDENT";
-
-    }
-}
+//
+//    }
+//
+//
