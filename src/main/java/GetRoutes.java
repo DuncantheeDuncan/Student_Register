@@ -20,8 +20,8 @@ public class GetRoutes {
 
 
         addLectures.runLecture();
-        addStudents.runStudent();
-//        jdbcstudents.runJDBCStudent();
+//        addStudents.runStudent();
+        jdbcstudents.runJDBCStudent();
         studentList.listStudents();
 
 
