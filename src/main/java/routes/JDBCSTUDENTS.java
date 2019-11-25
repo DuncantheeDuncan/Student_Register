@@ -133,8 +133,11 @@ public class JDBCSTUDENTS {
 
 
             try (Connection conn = DriverManager.getConnection(
-                    "jdbc:postgresql://127.0.0.1:5432/onlineRegister", "coder", "pg123");
-                 Statement statement = conn.createStatement(); PreparedStatement psinsert = conn.prepareStatement(SQL_INSERT);
+                    "jdbc:postgresql://127.0.0.1:5432/onlineRegister",
+                    "coder",
+                    "pg123");
+                 Statement statement = conn.createStatement();
+                 PreparedStatement psinsert = conn.prepareStatement(SQL_INSERT);
                  PreparedStatement psupdate = conn.prepareStatement("SQL_UPDATE")) {
 
                 if (conn != null) {
