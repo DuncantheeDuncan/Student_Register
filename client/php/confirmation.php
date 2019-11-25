@@ -1,53 +1,34 @@
-<?php 
-
-// session_start();
-
-
-// if(!isset($_SESSION['loggedin'])){
-	// header('location: ../index.php');	
-	// exit();
-// }
-// header("location: confirmation.php");
-// $lecture_name = 
-
-// echo $lecture_name." this";
-// $page = $_SERVER['PHP_SELF']; // this is to refresh the page // but we can find away to make it stop after it 
-// it refreshed..
-// $sec = 1;
-
-
-
-
+<?php
+session_start();
+require_once('connection.php')
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Confirm</title>
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<!-- <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'"> -->
+	<script type="text/javascript" src="../jquery-1.3.2.min.js/jquery-1.3.2.min.js"></script>
+	<script typetext="text/javascript" src="../http://code.jquery.com/jquery-latest.min.js"></script>
+	<link rel="stylesheet" type="text/css" href= "../css/main.css">
+
+
 </head>
 <body onload="closeTab()">
 	<div class="container">
 		<div id="logo_container">
-			<img class="img-responsive" id="Logo" src="images/rgi.png">
+			<img class="img-responsive" id="Logo" src="../images/home_rgi_logo.png">
 		</div>
 		<div class= "main_div">
-				<img class="Lecture_img"src="https://duncantheeduncan.github.io/my-git-images/Summative_assessment2/classAndInterface.png"> 	
+				<img class="Lecture_img" src="../images/lectures/photo.png">
 			<p>
-				<span id="ICAS_NUMBER">121589</span><BR>
-				
-				<span id="name"><?php echo '<br/>welcomeeer '
-				// .$_SESSION['name']. '!!';?>
-					
-				</span>
-				
-				
+				<span id="ICAS_NUMBER"><?php echo $_SESSION['login_ID'] ?></span><BR>
+				<span id="Name">Arnold Mubaiwa</span>
+				<span><?php echo $_SESSION['login_Name']  ?></span>
 			</p>
 			<p>Faculty Of<br>
 				<span id="Faculty">Information Technology</span> 
 			</p>
-			<a href="timetable.html">
-				<button>
+			<a href="timetable.php">
+				<button id="confirm">
 					Confirm
 				</button>
 			</a>

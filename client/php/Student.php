@@ -13,7 +13,7 @@
 		</div>
 		 <div class= "main_div">
 
-			 <h2>WELCOME  <br>TO PROGRAMMING 533</h2>
+			 <h2>WELCOME Mr Channel  <br>TO COURSE NAME</h2>
         	<BR>
             <form class="input_group">
 				<label>ENTER YOUR STUDENT NUMBER</label><br><br>
