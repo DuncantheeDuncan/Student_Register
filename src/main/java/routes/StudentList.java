@@ -92,7 +92,7 @@ public class StudentList extends AddStudents {
             List<String> student_surnames = new ArrayList<String>();
             List<Integer> studentnumbers = new ArrayList<Integer>();
 //
-            List<Object> collect = new ArrayList<Object>();
+//            List<Object> collect = new ArrayList<Object>();
 
 
             // populate students from the database
@@ -117,9 +117,9 @@ public class StudentList extends AddStudents {
                     student_surnames.add(surname);
                     studentnumbers.add(student_number);
 
-                    collect.add(student_names);
-                    collect.add(student_surnames);
-                    collect.add(student_number);
+//                    collect.add(student_names);
+//                    collect.add(student_surnames);
+//                    collect.add(student_number);
 
                 }
 
