@@ -1,2 +1,14 @@
---> Add Students
+--> Add Student(S)
+- names // done
+- surname // done
+- age
+- date of birth // done
+- identification// done
+- year of study // busy
+- add modules // done
+- ENUM gets whats inside the enum // done
+- study about IllegalStateException
 --> get student who are doing first , second, third and fourth year.
+
+-- > must be able to add all  modules for that current year
+-

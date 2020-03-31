@@ -79,8 +79,6 @@ public class StudentList extends AddStudents {
             }
 
 
-//    System.out.println();
-
             return new HandlebarsTemplateEngine().render(new ModelAndView(school_form_map, "Student.handlebars"));
 
         });
@@ -94,7 +92,7 @@ public class StudentList extends AddStudents {
             List<String> student_surnames = new ArrayList<String>();
             List<Integer> studentnumbers = new ArrayList<Integer>();
 //
-            List<Object> collect = new ArrayList<Object>();
+//            List<Object> collect = new ArrayList<Object>();
 
 
             // populate students from the database
@@ -119,9 +117,9 @@ public class StudentList extends AddStudents {
                     student_surnames.add(surname);
                     studentnumbers.add(student_number);
 
-                    collect.add(student_names);
-                    collect.add(student_surnames);
-                    collect.add(student_number);
+//                    collect.add(student_names);
+//                    collect.add(student_surnames);
+//                    collect.add(student_number);
 
                 }
 
@@ -152,8 +150,7 @@ public class StudentList extends AddStudents {
 
             // populate students from the database
 
-            try (Connection conn = DriverManager.getConnection(
-                    "jdbc:postgresql://127.0.0.1:5432/onlineRegister", "coder", "pg123"); Statement statement = conn.createStatement()) {
+            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/onlineRegister", "coder", "pg123"); Statement statement = conn.createStatement()) {
 
                 if (conn == null)
                     System.out.println("Failed to make connection to the DATABASE!");
