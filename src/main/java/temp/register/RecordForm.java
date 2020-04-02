@@ -1,9 +1,6 @@
 package temp.register;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class RecordForm {
     Map<String, String> studentRecord = new HashMap<>();
@@ -11,6 +8,8 @@ public class RecordForm {
 
 
     public String addingStudentNames(String name, String middleName, String surname) {
+
+
         studentRecord.put("name", name);
         studentRecord.put("surname", surname);
         studentRecord.put("middlename", middleName);
@@ -18,10 +17,6 @@ public class RecordForm {
         return String.valueOf(studentRecord);
     }
 
-    public List<Map<String, String>> getRecordsList() {
-        recordsList.add(studentRecord);
-        return recordsList;
-    }
 
     public String addingDateOfBirth(long dateOfBirth, String nationality) {
 
@@ -87,14 +82,14 @@ public class RecordForm {
         return day + " " + months + " " + year + " " + national;
     }
 
-    List<String> modules = new ArrayList<>();
+    List<String> Storingmodules = new ArrayList<>();
 
     public String addModules(String module) {//TODO: fix this method
-        modules.add(Modules.valueOf(module).getModule());
+        Storingmodules.add(Modules.valueOf(module).getModule());
 
-        studentRecord.put("modules", String.valueOf(modules));
+        studentRecord.put("modules", String.valueOf(Storingmodules));
 
-        return String.valueOf(modules);
+        return String.valueOf(Storingmodules);
     }
 
     public String addCellPhoneNumber(String cellNumber, String country) {
@@ -162,31 +157,50 @@ public class RecordForm {
     }
 
     public void selectDepartmentAndACurrentYearToEasilyAddModules() { //TODO last stop!!
-        /* first must select witch department is the learner registering
-         * select enrolling year
-         * and add all modules for that year both first and second semester*/
+        Modules[] modules = Modules.values();
+        String listOfAllModules = "";
+        String subject = "";
+        int year = 0;
 
-//        String[] departsments = {"A", "B", "C", "D"};
-
-        int year[] = {1,2,3};
-
-        Modules[] modules =  Modules.values();
-        System.out.println("EconomicsBusiness".equals(Departments.EconomicsBusiness.toString()));
-
-        for (Modules m: modules ) {
-
-            if ("EconomicsBusiness".equals(Departments.EconomicsBusiness.toString())){
-
-//                if ("1".equals(m.getYear()))
-
-                System.out.println(m.getYear());
-
+        for (Modules m : modules) {
+            if ("EconomicsBusiness".equals(Departments.IT.toString())) {// get all modules for EB
+                listOfAllModules = m.toString();
+                /* working getting specif value for a department */
+                if (listOfAllModules.contains("EB")) {
+                    subject = listOfAllModules;
+                    year = Modules.valueOf(subject).getYear();
+                    if (year == 1) {
+                        Storingmodules.add(Modules.valueOf(subject).getModule());
+                        studentRecord.put("Modules", String.valueOf(Storingmodules));
+                        studentRecord.put("Enrolment year", String.valueOf(Modules.valueOf(subject).getYear()));
+                    }
+                }
             }
         }
+    }
+
+    public boolean doesQualificationExists(String qualification) {
+
+        return false;
+    }
+
+    public boolean isTrueDepartmentExist(String department) {
+        Departments[] departments = Departments.values();
+//TODO        return Arrays.stream(departments).anyMatch(d -> department.toUpperCase().equals(d.toString()));
+
+        for (Departments d : departments) if (department.toUpperCase().equals(d.toString())) return true;
+
+        return false;
+    }
+
+    public String getSpecifModules(String specifModule) {
 
 
+        return specifModule;
+    }
 
-
-
+    public List<Map<String, String>> getRecordsList() {
+        recordsList.add(studentRecord);
+        return recordsList;
     }
 }
