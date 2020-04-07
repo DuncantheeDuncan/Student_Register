@@ -2,28 +2,18 @@ package temp.register;
 
 public enum Departments {
 
-    IT(
-            "Bachelor of Science in Information Technology",
-            "Diploma in Information Technology",
-            "Diploma in Computer Appliance"
-    ),
-    HIJ(
-            "D",
-            "E",
-            "F"),
-    BAMCSQ(
-            "A",
-            "B",
-            "C"
-    );
+    IT(" A"),
+    HIJ(" B"),
+    BAMCSQ(" C");
 
-    private String[] department;
+    private String department;
 
-    Departments(String... department) {
+    Departments(String department) {
         this.department = department;
+
     }
 
-    public String[] getDepartment() {
+    public String getDepartment() {
 
         return department;
     }

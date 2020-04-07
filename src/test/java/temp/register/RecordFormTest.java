@@ -128,10 +128,11 @@ class RecordFormTest {
 
     }
 
+    @Test
     void shouldCheckIfQualificationExists() {
         RecordForm recordForm = new RecordForm();
 
-        recordForm.doesQualificationExists("last stop");// last stop
+        recordForm.doesQualificationExists("Diploma in Information Technology");
 
     }
 }

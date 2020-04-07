@@ -21,7 +21,6 @@ public enum Modules {
     Modules(String module, int year) {
         this.module = module;
         this.year = year;
-//        this.moduleCode = moduleCode;
 
     }
 

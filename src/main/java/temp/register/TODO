@@ -13,3 +13,5 @@
 
 -- > must be able to add all  modules for that current year
 -
+
+--> i must create a method that will take a strings and return only  first letters

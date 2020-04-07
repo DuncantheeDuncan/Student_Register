@@ -181,6 +181,15 @@ public class RecordForm {
 
     public boolean doesQualificationExists(String qualification) {
 
+        Qualifications[] qualifications = Qualifications.values();
+
+        for (Qualifications quali : qualifications){
+
+            System.out.println(quali.getQualification());
+        }
+
+
+
         return false;
     }
 
