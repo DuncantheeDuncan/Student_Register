@@ -1,20 +1,23 @@
 package temp.register;
 
-import java.util.*;
+import temp.register.modulesRelated.Modules;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RecordForm {
-    Map<String, String> studentRecord = new HashMap<>();
-    private List<Map<String, String>> recordsList = new ArrayList<>();
 
+
+    Mapping mapping = new Mapping();
 
     public String addingStudentNames(String name, String middleName, String surname) {
 
 
-        studentRecord.put("name", name);
-        studentRecord.put("surname", surname);
-        studentRecord.put("middlename", middleName);
+        mapping.studentRecord.put("name", name);
+        mapping.studentRecord.put("surname", surname);
+        mapping.studentRecord.put("middlename", middleName);
 
-        return String.valueOf(studentRecord);
+        return String.valueOf(mapping.studentRecord);
     }
 
 
@@ -74,9 +77,9 @@ public class RecordForm {
                 throw new IllegalStateException("Unexpected value: " + month);
         }
 
-        studentRecord.put("ID", convertID);
-        studentRecord.put("Date of birth", day + " " + months.toUpperCase() + " " + year);
-        studentRecord.put("Nationality", national);
+        mapping.studentRecord.put("ID", convertID);
+        mapping.studentRecord.put("Date of birth", day + " " + months.toUpperCase() + " " + year);
+        mapping.studentRecord.put("Nationality", national);
 
 
         return day + " " + months + " " + year + " " + national;
@@ -87,7 +90,7 @@ public class RecordForm {
     public String addModules(String module) {//TODO: fix this method
         StoringModules.add(Modules.valueOf(module).getModule());
 
-        studentRecord.put("modules", String.valueOf(StoringModules));
+        mapping.studentRecord.put("modules", String.valueOf(StoringModules));
 
         return String.valueOf(StoringModules);
     }
@@ -107,7 +110,7 @@ public class RecordForm {
 
         String cellPhoneNumber = CountryCodes.valueOf(country).getCountryCode() + cellNumber.substring(1, 10);
 
-        studentRecord.put("cell phone number", cellPhoneNumber);
+        mapping.studentRecord.put("cell phone number", cellPhoneNumber);
         return cellPhoneNumber;
     }
 
@@ -127,7 +130,7 @@ public class RecordForm {
     public String fixingTheCountryString(String fixCountry) {
 
         String countryCode = "";
-        studentRecord.put("Country of residence", fixCountry);
+        mapping.studentRecord.put("Country of residence", fixCountry);
 
         String[] arrString = fixCountry.split(" ");
 
@@ -152,38 +155,4 @@ public class RecordForm {
 
     }
 
-    public void selectDepartmentAndACurrentYearToEasilyAddModules() { //TODO last stop!!
-        Modules[] modules = Modules.values();
-        String listOfAllModules = "";
-        String subject = "";
-        int year = 0;
-
-        for (Modules m : modules) {
-            if ("EconomicsBusiness".equals(Departments.IT.toString())) {// get all modules for EB
-                listOfAllModules = m.toString();
-                /* working getting specif value for a department */
-                if (listOfAllModules.contains("EB")) {// last stop
-                    subject = listOfAllModules;
-                    year = Modules.valueOf(subject).getYear();
-                    if (year == 1) {
-                        StoringModules.add(Modules.valueOf(subject).getModule());
-                        studentRecord.put("Modules", String.valueOf(StoringModules));
-                        studentRecord.put("Enrolment year", String.valueOf(Modules.valueOf(subject).getYear()));
-                    }
-                }
-            }
-        }
-    }
-
-
-
-
-
-
-
-
-    public List<Map<String, String>> getRecordsList() {
-        recordsList.add(studentRecord);
-        return recordsList;
-    }
 }

@@ -1,4 +1,4 @@
-package temp.register;
+package temp.register.modulesRelated;
 
 public enum Modules {
 
