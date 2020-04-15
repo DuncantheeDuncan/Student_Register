@@ -16,7 +16,6 @@ public enum Modules {
 
     private String module;
     private int year;
-    private String moduleCode;
 
     Modules(String module, int year) {
         this.module = module;
@@ -25,12 +24,7 @@ public enum Modules {
     }
 
 
-//    public String getModuleCode() {
-//
-//        System.out.println(Modules.values());
-//
-//        return moduleCode;
-//    }
+
 
     public String getModule() {
         return module;

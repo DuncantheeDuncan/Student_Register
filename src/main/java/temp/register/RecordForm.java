@@ -82,14 +82,14 @@ public class RecordForm {
         return day + " " + months + " " + year + " " + national;
     }
 
-    List<String> Storingmodules = new ArrayList<>();
+    List<String> StoringModules = new ArrayList<>();
 
     public String addModules(String module) {//TODO: fix this method
-        Storingmodules.add(Modules.valueOf(module).getModule());
+        StoringModules.add(Modules.valueOf(module).getModule());
 
-        studentRecord.put("modules", String.valueOf(Storingmodules));
+        studentRecord.put("modules", String.valueOf(StoringModules));
 
-        return String.valueOf(Storingmodules);
+        return String.valueOf(StoringModules);
     }
 
     public String addCellPhoneNumber(String cellNumber, String country) {
@@ -137,7 +137,7 @@ public class RecordForm {
         return countryCode;
     }
 
-    public static void listAllModulesAndCountryCodes() { // TODO fix this method later
+    public  void listAllModulesAndCountryCodes() { // TODO fix this method later
         Modules[] modules1 = Modules.values();
 
         for (Modules xx : modules1) {
@@ -149,10 +149,6 @@ public class RecordForm {
 
             System.out.println("country name " + countryCodes + " counry code " + countryCodes.getCountryCode());
         }
-
-//        for (String[] x : modules){
-//
-//        }
 
     }
 
@@ -166,12 +162,12 @@ public class RecordForm {
             if ("EconomicsBusiness".equals(Departments.IT.toString())) {// get all modules for EB
                 listOfAllModules = m.toString();
                 /* working getting specif value for a department */
-                if (listOfAllModules.contains("EB")) {
+                if (listOfAllModules.contains("EB")) {// last stop
                     subject = listOfAllModules;
                     year = Modules.valueOf(subject).getYear();
                     if (year == 1) {
-                        Storingmodules.add(Modules.valueOf(subject).getModule());
-                        studentRecord.put("Modules", String.valueOf(Storingmodules));
+                        StoringModules.add(Modules.valueOf(subject).getModule());
+                        studentRecord.put("Modules", String.valueOf(StoringModules));
                         studentRecord.put("Enrolment year", String.valueOf(Modules.valueOf(subject).getYear()));
                     }
                 }
@@ -179,34 +175,12 @@ public class RecordForm {
         }
     }
 
-    public boolean doesQualificationExists(String qualification) {
-
-        Qualifications[] qualifications = Qualifications.values();
-
-        for (Qualifications quali : qualifications){
-
-            System.out.println(quali.getQualification());
-        }
 
 
 
-        return false;
-    }
-
-    public boolean isTrueDepartmentExist(String department) {
-        Departments[] departments = Departments.values();
-//TODO        return Arrays.stream(departments).anyMatch(d -> department.toUpperCase().equals(d.toString()));
-
-        for (Departments d : departments) if (department.toUpperCase().equals(d.toString())) return true;
-
-        return false;
-    }
-
-    public String getSpecifModules(String specifModule) {
 
 
-        return specifModule;
-    }
+
 
     public List<Map<String, String>> getRecordsList() {
         recordsList.add(studentRecord);

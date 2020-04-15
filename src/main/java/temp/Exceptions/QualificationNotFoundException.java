@@ -1,11 +1,10 @@
 package temp.Exceptions;
 
-public class RecordFormException extends Exception {
+public class QualificationNotFoundException extends ModulesException {
 
     private String exceptionMessage;
-
-    RecordFormException(String exceptionMessage) {
-
+    public QualificationNotFoundException(String exceptionMessage) {
+        super(exceptionMessage);
         this.exceptionMessage = exceptionMessage;
     }
 

@@ -2,9 +2,9 @@ package temp.register;
 
 public enum Departments {
 
-    IT(" A"),
-    HIJ(" B"),
-    BAMCSQ(" C");
+    IT(" Information Technology"),
+    BS(" Business Economics "),
+    SJ(" Science Journalism");
 
     private String department;
 

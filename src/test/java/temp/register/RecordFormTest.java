@@ -91,7 +91,7 @@ class RecordFormTest {
     void shouldRecodingNationality() {
         RecordForm recordForm = new RecordForm();
 
-//        RecordForm.listAllModulesAndCountryCodes();
+        recordForm.listAllModulesAndCountryCodes();
 
 
 //        assertEquals("South African",recordForm.RecodingNationality("south african"));
@@ -107,32 +107,15 @@ class RecordFormTest {
 
     }
 
-    @Test
-    void shouldGetSpecifModules() {
-        RecordForm recordForm = new RecordForm();
+//    @Test
+//    void shouldGetSpecifModules() {
+//        RecordForm recordForm = new RecordForm();
+//
+//
+//        recordForm.getSpecifModules("");
+//    }
 
 
-        recordForm.getSpecifModules("");
-    }
 
-    @Test
-    void mustCheckIfDepartmentExist() {
-        RecordForm recordForm = new RecordForm();
 
-        assertTrue(recordForm.isTrueDepartmentExist("HIJ"), "must pass since IT exists");
-        assertTrue(recordForm.isTrueDepartmentExist("bamcsq"), "must pass even if input string is lower cases bamcsq");
-        assertTrue(recordForm.isTrueDepartmentExist("bAmcSq"), "should pass cases are made capital letters");
-
-        assertFalse(recordForm.isTrueDepartmentExist("LLB"), "must fail since we don't have LLB");
-        assertFalse(recordForm.isTrueDepartmentExist("llb"), "must fail since we don't have llb");
-
-    }
-
-    @Test
-    void shouldCheckIfQualificationExists() {
-        RecordForm recordForm = new RecordForm();
-
-        recordForm.doesQualificationExists("Diploma in Information Technology");
-
-    }
 }
