@@ -1,12 +1,12 @@
-package temp.register.exceptions;
+package temp.register.modulesRelated.exceptions;
 
-public class NumberTooBigException extends ModulesException {
+public class DepartmentNotFoundException extends ModulesException{
 
     private String exceptionMessage;
-    public NumberTooBigException(String exceptionMessage){
+
+    public DepartmentNotFoundException(String exceptionMessage) {
         super(exceptionMessage);
         this.exceptionMessage = exceptionMessage;
-
     }
 
     @Override

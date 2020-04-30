@@ -1,14 +1,10 @@
 package temp.register.modulesRelated;
 
-import temp.register.Mapping;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ModulesRelated {
 
-    Mapping mapping =new Mapping();
     public boolean doesQualificationExists(String qualification) {
 
         String stringShorten = stringShorten(qualification);
@@ -31,20 +27,14 @@ public class ModulesRelated {
     }
 
     public String moduleAndYear(String module, int year) {
-        //FIXME
-        // - fix my assertion to test for arrayLists
-        // - fix my method to return a string
-        // - or an array list
 
-        List<String> ADDINGMODULES = new ArrayList<>();
-
-        String listOfModules;
+        Map<String, String> ADDINGMODULES = new HashMap<>();
 
         Modules[] modules = Modules.values();
-
+        int x = 0;
         for (Modules M : modules) {
 
-            listOfModules = M.toString();
+            String listOfModules = M.toString();
 
             if (listOfModules.contains(module)) {
 
@@ -52,19 +42,20 @@ public class ModulesRelated {
 
                 if (getYear == year) {
 
+                    x++;
                     String addingModules = Modules.valueOf(listOfModules).getModule() + " year " + getYear;
 
-//                    mapping.recordsList.add(ADDINGMODULES);
-                    ADDINGMODULES.add(addingModules);
+                    ADDINGMODULES.put("module 1of" + x, addingModules);
                 }
             }
         }
+
         if (ADDINGMODULES.isEmpty()) return null;
 
-        return Arrays.toString(ADDINGMODULES.toArray());
+        return String.valueOf(ADDINGMODULES);
     }
 
-    public String stringShorten(String shorten) {
+    public String stringShorten( String shorten) {
 
         String[] stringSplitter = shorten.split(" ");
 

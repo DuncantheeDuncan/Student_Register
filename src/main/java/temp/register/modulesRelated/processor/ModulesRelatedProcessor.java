@@ -1,13 +1,12 @@
 package temp.register.modulesRelated.processor;
 
-import temp.register.exceptions.DepartmentNotFoundException;
-import temp.register.exceptions.NumberTooBigException;
-import temp.register.exceptions.QualificationNotFoundException;
+import temp.register.Mapping;
+import temp.register.modulesRelated.exceptions.DepartmentNotFoundException;
+import temp.register.modulesRelated.exceptions.NumberTooBigException;
+import temp.register.modulesRelated.exceptions.QualificationNotFoundException;
 import temp.register.modulesRelated.ModulesRelated;
 
 public class ModulesRelatedProcessor {
-
-    private ModulesRelated processor = new ModulesRelated();
 
     public String modulesProcessor
             (
@@ -21,6 +20,8 @@ public class ModulesRelatedProcessor {
             QualificationNotFoundException,
             NumberTooBigException
     {
+        ModulesRelated processor = new ModulesRelated();
+
         boolean isTrueExists = processor.isTrueDepartmentExist(isTrueDepartmentExist);
 
         if (isTrueExists) {
@@ -34,6 +35,7 @@ public class ModulesRelatedProcessor {
                 String modules = processor.moduleAndYear(module, year);
 
                 if (modules != null) {
+                    Mapping.studentRecord.put("modules",modules);
 
                     return modules;
 

@@ -1,4 +1,4 @@
-package temp.register.exceptions;
+package temp.register.modulesRelated.exceptions;
 
 public class ModulesException extends Exception {
 

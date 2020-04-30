@@ -1,4 +1,4 @@
-package temp.register.exceptions;
+package temp.register.modulesRelated.exceptions;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

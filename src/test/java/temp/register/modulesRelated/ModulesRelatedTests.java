@@ -1,20 +1,22 @@
 package temp.register.modulesRelated;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ModulesRelatedTests {
+class ModulesRelatedTests {
 
     @Test
+    @DisplayName("this test check if the department exists from ENUM keys")
     void shouldCheckIfDepartmentExist() {
         ModulesRelated modulesRelated = new ModulesRelated();
 
-        assertTrue(modulesRelated.isTrueDepartmentExist("HIJ"), "must pass since IT exists");
-        assertTrue(modulesRelated.isTrueDepartmentExist("bamcsq"), "must pass even if input string is lower cases bamcsq");
-        assertTrue(modulesRelated.isTrueDepartmentExist("bAmcSq"), "should pass cases are made capital letters");
+        assertTrue(modulesRelated.isTrueDepartmentExist("cs"));
+        assertTrue(modulesRelated.isTrueDepartmentExist("EB"), "must pass even if input string is lower cases bamcsq");
+        assertTrue(modulesRelated.isTrueDepartmentExist("SJ"), "should pass cases are made capital letters");
 
         assertFalse(modulesRelated.isTrueDepartmentExist("LLB"), "must fail since we don't have LLB");
         assertFalse(modulesRelated.isTrueDepartmentExist("llb"), "must fail since we don't have llb");
@@ -29,7 +31,6 @@ public class ModulesRelatedTests {
         assertTrue(modulesRelated.doesQualificationExists("Diploma in Information Technology"));
         assertFalse(modulesRelated.doesQualificationExists("Advanced Diploma in Information Technology"), "this must fail 'coz the qualification does not exist");
 
-
     }
 
     @Test
@@ -37,9 +38,9 @@ public class ModulesRelatedTests {
         ModulesRelated modulesRelated = new ModulesRelated();
 
         assertEquals("CIGAA", modulesRelated.stringShorten("can I get an Amen"));
-        assertEquals("CIGAA", modulesRelated.stringShorten("can I get an of Amen"), "must ignore 'of'");
-        assertEquals("BSIT", modulesRelated.stringShorten("Bachelor of Science in Information Technology"), "must ignore 'of' and 'in");
-        assertEquals("DCA", modulesRelated.stringShorten("diploma in computer appliance"), "must ignore  and 'in and capitalise first letters");
+        assertEquals("must ignore 'of'", modulesRelated.stringShorten("can I get an of Amen"), "CIGAA");
+        assertEquals("must ignore 'of' and 'in", modulesRelated.stringShorten("Bachelor of Science in Information Technology"), "BSIT");
+        assertEquals("must ignore  and 'in and capitalise first letters", modulesRelated.stringShorten("diploma in computer appliance"), "DCA");
         assertEquals("D", modulesRelated.stringShorten("diploma"));
 
     }
@@ -48,14 +49,9 @@ public class ModulesRelatedTests {
     void shouldGetModuleAndYear() {
         ModulesRelated modulesRelated = new ModulesRelated();
 
-        //FIXME
-        // - fix my assertion to test for arrayLists
-        // - fix my method to return a string
-        // - or an array list
-
-        assertEquals("[Web Technology 511 year 1, Web Technology 511 year 1, Web Technology 511 year 1]", modulesRelated.moduleAndYear("DIEB", 1));
-        assertEquals("[Software Development 511 year 1]", modulesRelated.moduleAndYear("DIT", 1));
-        assertEquals("[Programming 511 year 3]", modulesRelated.moduleAndYear("DIT", 3));
+        assertEquals("{module 1of2=Web Technology 511 year 1, module 1of3=Web Technology 511 year 1, module 1of1=Web Technology 511 year 1}", modulesRelated.moduleAndYear("DEB", 1));
+        assertEquals("{module 1of1=Software Development 511 year 1}", modulesRelated.moduleAndYear("DIT", 1));
+        assertEquals("{module 1of1=Programming 511 year 3}", modulesRelated.moduleAndYear("DIT", 3));
 
     }
 }

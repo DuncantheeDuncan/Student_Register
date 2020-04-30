@@ -1,17 +1,22 @@
---> Add Student(S)
+
+--> module methods, done!!
+
+--> Add
 - names // done
 - surname // done
 - age
 - date of birth // done
 - identification// done
-- year of study // busy
-- add modules // done
-- ENUM gets whats inside the enum // done
-- study about IllegalStateException
+
+
+- study about IllegalStat
+- Exception
 - study more about streams
+
 --> get student who are doing first , second, third and fourth year.
 
 -- > must be able to add all  modules for that current year
 -
-
+--> registered date
 --> i must create a method that will take a strings and return only  first letters
+

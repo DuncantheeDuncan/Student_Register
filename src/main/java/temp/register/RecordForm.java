@@ -1,24 +1,12 @@
 package temp.register;
 
-import temp.register.modulesRelated.Modules;
 
-import java.util.ArrayList;
-import java.util.List;
+import temp.register.personalInformationRelated.CountryCodes;
 
 public class RecordForm {
 
 
-    Mapping mapping = new Mapping();
 
-    public String addingStudentNames(String name, String middleName, String surname) {
-
-
-        mapping.studentRecord.put("name", name);
-        mapping.studentRecord.put("surname", surname);
-        mapping.studentRecord.put("middlename", middleName);
-
-        return String.valueOf(mapping.studentRecord);
-    }
 
 
     public String addingDateOfBirth(long dateOfBirth, String nationality) {
@@ -77,23 +65,23 @@ public class RecordForm {
                 throw new IllegalStateException("Unexpected value: " + month);
         }
 
-        mapping.studentRecord.put("ID", convertID);
-        mapping.studentRecord.put("Date of birth", day + " " + months.toUpperCase() + " " + year);
-        mapping.studentRecord.put("Nationality", national);
+        Mapping.studentRecord.put("ID", convertID);
+        Mapping.studentRecord.put("Date of birth", day + " " + months.toUpperCase() + " " + year);
+        Mapping.studentRecord.put("Nationality", national);
 
 
         return day + " " + months + " " + year + " " + national;
     }
 
-    List<String> StoringModules = new ArrayList<>();
-
-    public String addModules(String module) {//TODO: fix this method
-        StoringModules.add(Modules.valueOf(module).getModule());
-
-        mapping.studentRecord.put("modules", String.valueOf(StoringModules));
-
-        return String.valueOf(StoringModules);
-    }
+//    List<String> StoringModules = new ArrayList<>();
+//
+//    public String addModules(String module) {//TODO: fix this method
+//        StoringModules.add(Modules.valueOf(module).getModule());
+//
+//        mapping.studentRecord.put("modules", String.valueOf(StoringModules));
+//
+//        return String.valueOf(StoringModules);
+//    }
 
     public String addCellPhoneNumber(String cellNumber, String country) {
 
@@ -110,7 +98,7 @@ public class RecordForm {
 
         String cellPhoneNumber = CountryCodes.valueOf(country).getCountryCode() + cellNumber.substring(1, 10);
 
-        mapping.studentRecord.put("cell phone number", cellPhoneNumber);
+        Mapping.studentRecord.put("cell phone number", cellPhoneNumber);
         return cellPhoneNumber;
     }
 
@@ -130,7 +118,7 @@ public class RecordForm {
     public String fixingTheCountryString(String fixCountry) {
 
         String countryCode = "";
-        mapping.studentRecord.put("Country of residence", fixCountry);
+        Mapping.studentRecord.put("Country of residence", fixCountry);
 
         String[] arrString = fixCountry.split(" ");
 
@@ -140,12 +128,8 @@ public class RecordForm {
         return countryCode;
     }
 
-    public  void listAllModulesAndCountryCodes() { // TODO fix this method later
-        Modules[] modules1 = Modules.values();
+    public  void CountryCodes() { // TODO fix this method later
 
-        for (Modules xx : modules1) {
-            System.out.println("Module name " + xx + " Module " + xx.getModule());
-        }
         CountryCodes[] country = CountryCodes.values();
 
         for (CountryCodes countryCodes : country) {

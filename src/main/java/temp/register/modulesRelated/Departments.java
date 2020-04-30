@@ -3,7 +3,8 @@ package temp.register.modulesRelated;
 public enum Departments {
 
     IT(" Information Technology"),
-    BS(" Business Economics "),
+    EB(" Economic Business"),
+    CS("Computer Science"),
     SJ(" Science Journalism");
 
     private String department;
