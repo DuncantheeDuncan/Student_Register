@@ -33,17 +33,6 @@ class ModulesRelatedTests {
 
     }
 
-    @Test
-    void shouldShortenAString() {
-        ModulesRelated modulesRelated = new ModulesRelated();
-
-        assertEquals("CIGAA", modulesRelated.stringShorten("can I get an Amen"));
-        assertEquals("must ignore 'of'", modulesRelated.stringShorten("can I get an of Amen"), "CIGAA");
-        assertEquals("must ignore 'of' and 'in", modulesRelated.stringShorten("Bachelor of Science in Information Technology"), "BSIT");
-        assertEquals("must ignore  and 'in and capitalise first letters", modulesRelated.stringShorten("diploma in computer appliance"), "DCA");
-        assertEquals("D", modulesRelated.stringShorten("diploma"));
-
-    }
 
     @Test
     void shouldGetModuleAndYear() {

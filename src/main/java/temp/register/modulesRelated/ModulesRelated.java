@@ -1,13 +1,16 @@
 package temp.register.modulesRelated;
 
+import temp.register.methodToolbox.ToolBox;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ModulesRelated {
+    ToolBox toolBox = new ToolBox();
 
     public boolean doesQualificationExists(String qualification) {
 
-        String stringShorten = stringShorten(qualification);
+        String stringShorten = toolBox.stringShorten(qualification);
 
         Qualifications[] qualifications = Qualifications.values();
 
@@ -55,19 +58,4 @@ public class ModulesRelated {
         return String.valueOf(ADDINGMODULES);
     }
 
-    public String stringShorten( String shorten) {
-
-        String[] stringSplitter = shorten.split(" ");
-
-        StringBuilder firstsLetters = new StringBuilder();
-
-        for (String S : stringSplitter) {
-
-            if ("in".equals(S) | "of".equals(S)) continue;
-
-            firstsLetters.append(S.substring(0, 1).toUpperCase());
-        }
-
-        return firstsLetters.toString();
-    }
 }

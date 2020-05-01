@@ -3,21 +3,32 @@ package temp.register.personalInformationRelated;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class PersonalInformationTests {
 
+    private String expectedMessage;
+    private String actualMessage;
+
+
+
+
     @Test
-    @DisplayName("adding names")
-    void shouldAddNames(){
+    @DisplayName("add a name")
+    void shouldAddAName() {
         PersonalInformation personalInformation = new PersonalInformation();
 
-        String x = " ";
-        personalInformation.addingNames(x,"mthoko","Zulu");
+        expectedMessage = "Phumlani";
+        actualMessage = personalInformation.firstName("phumlani");
 
-    }
-    @Test
-    void g(){
-        PersonalInformation personalInformation = new PersonalInformation();
-        personalInformation.addingNames("x","mthoko","Zulu");
+        assertEquals(expectedMessage, actualMessage);
+        assertTrue(expectedMessage.contains(actualMessage));
 
+        expectedMessage = "Sithabile";
+        actualMessage = personalInformation.firstName("siThAbIlE");
+
+        assertEquals(expectedMessage, actualMessage);
+        assertTrue(expectedMessage.contains(actualMessage));
     }
 }

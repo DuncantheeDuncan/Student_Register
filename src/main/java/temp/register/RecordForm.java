@@ -73,15 +73,6 @@ public class RecordForm {
         return day + " " + months + " " + year + " " + national;
     }
 
-//    List<String> StoringModules = new ArrayList<>();
-//
-//    public String addModules(String module) {//TODO: fix this method
-//        StoringModules.add(Modules.valueOf(module).getModule());
-//
-//        mapping.studentRecord.put("modules", String.valueOf(StoringModules));
-//
-//        return String.valueOf(StoringModules);
-//    }
 
     public String addCellPhoneNumber(String cellNumber, String country) {
 
