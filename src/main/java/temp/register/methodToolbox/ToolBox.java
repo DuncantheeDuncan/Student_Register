@@ -2,6 +2,7 @@ package temp.register.methodToolbox;
 
 public class ToolBox {
 
+
     public String capitaliseFirstLetter(String capitalise) {
         String[] splitting = capitalise.split(" ");
         capitalise = "";
@@ -18,7 +19,6 @@ public class ToolBox {
         char[] splitUp = check.toCharArray();
 
         for (char c : splitUp) {
-
             for (int j = 0; j <= 9; j++)
                 if (String.valueOf(c).equals(String.valueOf(j)))
                     return true;
@@ -26,7 +26,7 @@ public class ToolBox {
         return false;
     }
 
-    public String stringShorten( String shorten) {
+    public String stringShorten(String shorten) {
 
         String[] stringSplitter = shorten.split(" ");
 

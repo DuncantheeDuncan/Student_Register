@@ -4,6 +4,7 @@ import temp.register.modulesRelated.exceptions.DepartmentNotFoundException;
 import temp.register.modulesRelated.exceptions.NumberTooBigException;
 import temp.register.modulesRelated.exceptions.QualificationNotFoundException;
 import temp.register.modulesRelated.processor.ModulesRelatedProcessor;
+import temp.register.personalInformationRelated.PersonalInformation;
 
 public class TempRun {
 
@@ -11,11 +12,16 @@ public class TempRun {
         RecordForm recordForm = new RecordForm();
         Mapping mapping = new Mapping();
         ModulesRelatedProcessor modules = new ModulesRelatedProcessor();
+        PersonalInformation personalInformation = new PersonalInformation();
 
-//        recordForm.addingStudentNames("thabiso", "lungelo", "dlamini");
-//        recordForm.addingDateOfBirth(97_03_20_7654_084L, "itaLiaN");
-//        recordForm.addCellPhoneNumber("0847683982", "united state of america");
 
+
+// to change and run from the processor
+        personalInformation.nationalIdentification
+                (
+                        10_06_02_5239_084L,
+                        true
+                );
 
         modules.modulesProcessor
                 (
